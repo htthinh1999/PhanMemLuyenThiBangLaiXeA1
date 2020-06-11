@@ -17,7 +17,7 @@ namespace BTL_LTCSharp
             InitializeComponent();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        void Login()
         {
             string sql = "Select * from TaiKhoan where Username='" + txtUsername.Text + "' and Password='" + txtPassword.Text + "'";
             DataTable dataLogin = DatabaseManager.executeQuery(sql);
@@ -45,12 +45,33 @@ namespace BTL_LTCSharp
             }
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            Login();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                Login();
+            }
+        }
+
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             frmSignUp signUp = new frmSignUp();
             signUp.loginForm = this;
             signUp.Show();
             this.Hide();
+        }
+
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Bạn chắc chắn muốn thoát chương trình chứ?", "Thoát chương trình?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

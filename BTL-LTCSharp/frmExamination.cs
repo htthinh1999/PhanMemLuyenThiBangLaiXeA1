@@ -16,10 +16,11 @@ namespace BTL_LTCSharp
         public frmCustomer customerForm;
 
         Dictionary<int, string> question = new Dictionary<int, string>();
+        Dictionary<int, string> imageOfquestion = new Dictionary<int, string>();
         Dictionary<int, List<string>> answer = new Dictionary<int, List<string>>();
 
         int timeCountDown = 900;    // 15 minutes = 900 seconds
-        int maxQuestionIndex = 20;
+        int maxQuestionIndex = 150;
         int questionIndex = 1;
 
         public frmExamination()
@@ -49,11 +50,12 @@ namespace BTL_LTCSharp
 
         void GetQuestionFromDB()
         {
-            string sql = "Select MaCauHoi, NDCauHoi from CauHoi";
+            string sql = "Select MaCauHoi, NDCauHoi, Hinh from CauHoi";
             DataTable dataQuestion = DatabaseManager.executeQuery(sql);
             foreach (DataRow row in dataQuestion.Rows)
             {
                 question.Add(Convert.ToInt32(row["MaCauHoi"]), Convert.ToString(row["NDCauHoi"]));
+                imageOfquestion.Add(Convert.ToInt32(row["MaCauHoi"]), Convert.ToString(row["Hinh"]));
             }
         }
 
@@ -78,6 +80,16 @@ namespace BTL_LTCSharp
             gbxAskAnswer.Text = "CÂU HỎI " + questionIndex;
             lblQuestion.Text = question[questionID];
             int answerIndex = 0;
+            if (!imageOfquestion[questionID].Equals(""))
+            {
+                picImage.Image = new Bitmap((Bitmap)Properties.Resources.ResourceManager.GetObject(imageOfquestion[questionID]));
+                picImage.Location = new Point(picImage.Location.X, lblQuestion.Location.Y + lblQuestion.Height + 10);
+                picImage.Show();
+            }
+            else
+            {
+                picImage.Hide();
+            }
             foreach (CheckBox cbxAnswer in gbxAskAnswer.Controls.OfType<CheckBox>())
             {
                 cbxAnswer.Checked = false;
@@ -85,7 +97,7 @@ namespace BTL_LTCSharp
                 cbxAnswer.Show();
                 cbxAnswer.Text = answer[questionID][answerIndex];
                 Console.WriteLine(cbxAnswer.Text);
-                cbxAnswer.Location = new Point(lblQuestion.Location.X, lblQuestion.Location.Y + lblQuestion.Height + answerIndex * 50 + 20);
+                cbxAnswer.Location = new Point(lblQuestion.Location.X, (picImage.Visible)? picImage.Location.Y + picImage.Height + answerIndex * 35 : lblQuestion.Location.Y + lblQuestion.Height + answerIndex * 70 + 20);
                 answerIndex++;
             }
         }
@@ -116,7 +128,14 @@ namespace BTL_LTCSharp
 
         private void frmExamination_FormClosing(object sender, FormClosingEventArgs e)
         {
-            customerForm.Show();
+            if (MessageBox.Show("Bạn chắc chắn muốn thoát cuộc thi chứ?", "Thoát cuộc thi?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                customerForm.Show();
+            }
         }
 
         private void timer_Tick(object sender, EventArgs e)

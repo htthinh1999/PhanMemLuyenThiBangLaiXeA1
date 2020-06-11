@@ -16,17 +16,6 @@ namespace BTL_LTCSharp
         static SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-UIBSI5T;Initial Catalog=BTLThiLaiXe; User ID=sa; Password=123456;");
         static SqlDataAdapter sqlData;
 
-        public static void GetData()
-        {
-            sqlData = new SqlDataAdapter("Select * from CauHoi", sqlConnection);
-            DataTable dataTable = new DataTable();
-            sqlData.Fill(dataTable);
-            foreach(DataRow row in dataTable.Rows)
-            {
-                Console.WriteLine(row[1]);
-            }
-        }
-
         public static DataTable executeQuery(string sql)
         {
             sqlData = new SqlDataAdapter(sql, sqlConnection);

@@ -21,7 +21,14 @@ namespace BTL_LTCSharp
 
         private void frmSignUp_FormClosing(object sender, FormClosingEventArgs e)
         {
-            loginForm.Show();
+            if(MessageBox.Show("Bạn chắc chắn muốn thoát đăng ký chứ?", "Thoát đăng ký?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                loginForm.Show();
+            }
         }
 
         private void btnSignUp_Click(object sender, EventArgs e)
@@ -32,7 +39,7 @@ namespace BTL_LTCSharp
                 string sql = "Insert into TaiKhoan values('" + txtUsername.Text + "', '" + txtPassword.Text + "', 0)";
                 DatabaseManager.executeQuery(sql);
                 sql = "Select COUNT(*) from ThiSinh";
-                int IDindex = Convert.ToInt32(DatabaseManager.executeQuery(sql).Rows[0][0]) + 1;
+                int IDindex = Convert.ToInt32(DatabaseManager.executeQuery(sql).Rows[0][0]) + 1;    // Get numbers of ThiSinh
                 string maThiSinh = "TS" + Convert.ToString(IDindex).PadLeft(3, '0');
                 sql = "Insert into ThiSinh values('" + maThiSinh + "', N'" + txtFullName.Text + "', '" + cbxYear.Text + cbxMonth.Text + cbxDay.Text + "', '"
                                                         + (cbxSex.Text.Equals("Nam") ? "M" : "F") + "', N'" + txtAddress.Text + "', '" + txtUsername.Text + "')";

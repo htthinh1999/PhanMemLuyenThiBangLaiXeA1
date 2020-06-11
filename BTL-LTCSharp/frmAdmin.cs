@@ -19,7 +19,14 @@ namespace BTL_LTCSharp
 
         private void frmAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Bạn chắc chắn muốn thoát chương trình chứ?", "Thoát chương trình?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
         }
 
         private void picAddQuestionAnswer_Click(object sender, EventArgs e)
