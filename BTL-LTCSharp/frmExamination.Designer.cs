@@ -39,13 +39,17 @@
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.gbxAskAnswer = new System.Windows.Forms.GroupBox();
+            this.lblAnswer4 = new System.Windows.Forms.Label();
+            this.lblAnswer3 = new System.Windows.Forms.Label();
+            this.lblAnswer2 = new System.Windows.Forms.Label();
+            this.lblAnswer1 = new System.Windows.Forms.Label();
+            this.picImage = new System.Windows.Forms.PictureBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.cbxAnswer4 = new System.Windows.Forms.CheckBox();
             this.cbxAnswer3 = new System.Windows.Forms.CheckBox();
             this.cbxAnswer2 = new System.Windows.Forms.CheckBox();
             this.cbxAnswer1 = new System.Windows.Forms.CheckBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.picImage = new System.Windows.Forms.PictureBox();
             this.gbxInformation.SuspendLayout();
             this.gbxAskAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
@@ -161,6 +165,10 @@
             // 
             // gbxAskAnswer
             // 
+            this.gbxAskAnswer.Controls.Add(this.lblAnswer4);
+            this.gbxAskAnswer.Controls.Add(this.lblAnswer3);
+            this.gbxAskAnswer.Controls.Add(this.lblAnswer2);
+            this.gbxAskAnswer.Controls.Add(this.lblAnswer1);
             this.gbxAskAnswer.Controls.Add(this.picImage);
             this.gbxAskAnswer.Controls.Add(this.btnSubmit);
             this.gbxAskAnswer.Controls.Add(this.cbxAnswer4);
@@ -179,73 +187,57 @@
             this.gbxAskAnswer.TabStop = false;
             this.gbxAskAnswer.Text = "CÂU HỎI";
             // 
-            // btnSubmit
+            // lblAnswer4
             // 
-            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.Location = new System.Drawing.Point(317, 461);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(120, 35);
-            this.btnSubmit.TabIndex = 6;
-            this.btnSubmit.Text = "NỘP BÀI";
-            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.lblAnswer4.AutoSize = true;
+            this.lblAnswer4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer4.ForeColor = System.Drawing.Color.Black;
+            this.lblAnswer4.Location = new System.Drawing.Point(57, 374);
+            this.lblAnswer4.MaximumSize = new System.Drawing.Size(740, 0);
+            this.lblAnswer4.Name = "lblAnswer4";
+            this.lblAnswer4.Size = new System.Drawing.Size(72, 21);
+            this.lblAnswer4.TabIndex = 11;
+            this.lblAnswer4.Text = "Đáp án 4";
+            this.lblAnswer4.Click += new System.EventHandler(this.lblAnswer_Click);
             // 
-            // cbxAnswer4
+            // lblAnswer3
             // 
-            this.cbxAnswer4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAnswer4.ForeColor = System.Drawing.Color.Black;
-            this.cbxAnswer4.Location = new System.Drawing.Point(9, 365);
-            this.cbxAnswer4.MaximumSize = new System.Drawing.Size(755, 0);
-            this.cbxAnswer4.MinimumSize = new System.Drawing.Size(0, 40);
-            this.cbxAnswer4.Name = "cbxAnswer4";
-            this.cbxAnswer4.Size = new System.Drawing.Size(750, 80);
-            this.cbxAnswer4.TabIndex = 5;
-            this.cbxAnswer4.Text = "Đáp án 4";
-            this.cbxAnswer4.UseVisualStyleBackColor = true;
+            this.lblAnswer3.AutoSize = true;
+            this.lblAnswer3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer3.ForeColor = System.Drawing.Color.Black;
+            this.lblAnswer3.Location = new System.Drawing.Point(56, 288);
+            this.lblAnswer3.MaximumSize = new System.Drawing.Size(740, 0);
+            this.lblAnswer3.Name = "lblAnswer3";
+            this.lblAnswer3.Size = new System.Drawing.Size(72, 21);
+            this.lblAnswer3.TabIndex = 10;
+            this.lblAnswer3.Text = "Đáp án 3";
+            this.lblAnswer3.Click += new System.EventHandler(this.lblAnswer_Click);
             // 
-            // cbxAnswer3
+            // lblAnswer2
             // 
-            this.cbxAnswer3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAnswer3.ForeColor = System.Drawing.Color.Black;
-            this.cbxAnswer3.Location = new System.Drawing.Point(9, 279);
-            this.cbxAnswer3.MaximumSize = new System.Drawing.Size(755, 0);
-            this.cbxAnswer3.MinimumSize = new System.Drawing.Size(0, 40);
-            this.cbxAnswer3.Name = "cbxAnswer3";
-            this.cbxAnswer3.Size = new System.Drawing.Size(750, 80);
-            this.cbxAnswer3.TabIndex = 5;
-            this.cbxAnswer3.Text = "Đáp án 3";
-            this.cbxAnswer3.UseVisualStyleBackColor = true;
+            this.lblAnswer2.AutoSize = true;
+            this.lblAnswer2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer2.ForeColor = System.Drawing.Color.Black;
+            this.lblAnswer2.Location = new System.Drawing.Point(56, 202);
+            this.lblAnswer2.MaximumSize = new System.Drawing.Size(740, 0);
+            this.lblAnswer2.Name = "lblAnswer2";
+            this.lblAnswer2.Size = new System.Drawing.Size(72, 21);
+            this.lblAnswer2.TabIndex = 9;
+            this.lblAnswer2.Text = "Đáp án 2";
+            this.lblAnswer2.Click += new System.EventHandler(this.lblAnswer_Click);
             // 
-            // cbxAnswer2
+            // lblAnswer1
             // 
-            this.cbxAnswer2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAnswer2.ForeColor = System.Drawing.Color.Black;
-            this.cbxAnswer2.Location = new System.Drawing.Point(9, 193);
-            this.cbxAnswer2.MaximumSize = new System.Drawing.Size(755, 0);
-            this.cbxAnswer2.MinimumSize = new System.Drawing.Size(0, 40);
-            this.cbxAnswer2.Name = "cbxAnswer2";
-            this.cbxAnswer2.Size = new System.Drawing.Size(750, 80);
-            this.cbxAnswer2.TabIndex = 5;
-            this.cbxAnswer2.Text = "Đáp án 2";
-            this.cbxAnswer2.UseVisualStyleBackColor = true;
-            // 
-            // cbxAnswer1
-            // 
-            this.cbxAnswer1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxAnswer1.ForeColor = System.Drawing.Color.Black;
-            this.cbxAnswer1.Location = new System.Drawing.Point(9, 107);
-            this.cbxAnswer1.MaximumSize = new System.Drawing.Size(755, 0);
-            this.cbxAnswer1.MinimumSize = new System.Drawing.Size(0, 40);
-            this.cbxAnswer1.Name = "cbxAnswer1";
-            this.cbxAnswer1.Size = new System.Drawing.Size(750, 80);
-            this.cbxAnswer1.TabIndex = 5;
-            this.cbxAnswer1.Text = "Đáp án 1";
-            this.cbxAnswer1.UseVisualStyleBackColor = true;
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Interval = 1000;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            this.lblAnswer1.AutoSize = true;
+            this.lblAnswer1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAnswer1.ForeColor = System.Drawing.Color.Black;
+            this.lblAnswer1.Location = new System.Drawing.Point(56, 116);
+            this.lblAnswer1.MaximumSize = new System.Drawing.Size(740, 0);
+            this.lblAnswer1.Name = "lblAnswer1";
+            this.lblAnswer1.Size = new System.Drawing.Size(72, 21);
+            this.lblAnswer1.TabIndex = 8;
+            this.lblAnswer1.Text = "Đáp án 1";
+            this.lblAnswer1.Click += new System.EventHandler(this.lblAnswer_Click);
             // 
             // picImage
             // 
@@ -256,6 +248,79 @@
             this.picImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImage.TabIndex = 7;
             this.picImage.TabStop = false;
+            // 
+            // btnSubmit
+            // 
+            this.btnSubmit.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Location = new System.Drawing.Point(317, 461);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(120, 35);
+            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.Text = "NỘP BÀI";
+            this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
+            // 
+            // cbxAnswer4
+            // 
+            this.cbxAnswer4.AutoSize = true;
+            this.cbxAnswer4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAnswer4.ForeColor = System.Drawing.Color.Black;
+            this.cbxAnswer4.Location = new System.Drawing.Point(9, 365);
+            this.cbxAnswer4.MaximumSize = new System.Drawing.Size(755, 0);
+            this.cbxAnswer4.MinimumSize = new System.Drawing.Size(0, 40);
+            this.cbxAnswer4.Name = "cbxAnswer4";
+            this.cbxAnswer4.Size = new System.Drawing.Size(15, 40);
+            this.cbxAnswer4.TabIndex = 5;
+            this.cbxAnswer4.UseVisualStyleBackColor = true;
+            this.cbxAnswer4.Click += new System.EventHandler(this.cbxAnswer_Click);
+            // 
+            // cbxAnswer3
+            // 
+            this.cbxAnswer3.AutoSize = true;
+            this.cbxAnswer3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAnswer3.ForeColor = System.Drawing.Color.Black;
+            this.cbxAnswer3.Location = new System.Drawing.Point(9, 279);
+            this.cbxAnswer3.MaximumSize = new System.Drawing.Size(755, 0);
+            this.cbxAnswer3.MinimumSize = new System.Drawing.Size(0, 40);
+            this.cbxAnswer3.Name = "cbxAnswer3";
+            this.cbxAnswer3.Size = new System.Drawing.Size(15, 40);
+            this.cbxAnswer3.TabIndex = 5;
+            this.cbxAnswer3.UseVisualStyleBackColor = true;
+            this.cbxAnswer3.Click += new System.EventHandler(this.cbxAnswer_Click);
+            // 
+            // cbxAnswer2
+            // 
+            this.cbxAnswer2.AutoSize = true;
+            this.cbxAnswer2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAnswer2.ForeColor = System.Drawing.Color.Black;
+            this.cbxAnswer2.Location = new System.Drawing.Point(9, 193);
+            this.cbxAnswer2.MaximumSize = new System.Drawing.Size(755, 0);
+            this.cbxAnswer2.MinimumSize = new System.Drawing.Size(0, 40);
+            this.cbxAnswer2.Name = "cbxAnswer2";
+            this.cbxAnswer2.Size = new System.Drawing.Size(15, 40);
+            this.cbxAnswer2.TabIndex = 5;
+            this.cbxAnswer2.UseVisualStyleBackColor = true;
+            this.cbxAnswer2.Click += new System.EventHandler(this.cbxAnswer_Click);
+            // 
+            // cbxAnswer1
+            // 
+            this.cbxAnswer1.AutoSize = true;
+            this.cbxAnswer1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbxAnswer1.ForeColor = System.Drawing.Color.Black;
+            this.cbxAnswer1.Location = new System.Drawing.Point(9, 107);
+            this.cbxAnswer1.MaximumSize = new System.Drawing.Size(755, 0);
+            this.cbxAnswer1.MinimumSize = new System.Drawing.Size(0, 40);
+            this.cbxAnswer1.Name = "cbxAnswer1";
+            this.cbxAnswer1.Size = new System.Drawing.Size(15, 40);
+            this.cbxAnswer1.TabIndex = 5;
+            this.cbxAnswer1.UseVisualStyleBackColor = true;
+            this.cbxAnswer1.Click += new System.EventHandler(this.cbxAnswer_Click);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
             // frmExamination
             // 
@@ -271,7 +336,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LUYỆN THI TRẮC NGHIỆM BẰNG LÁI XE A1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmExamination_FormClosing);
-            this.Load += new System.EventHandler(this.frmExamination_Load);
             this.gbxInformation.ResumeLayout(false);
             this.gbxInformation.PerformLayout();
             this.gbxAskAnswer.ResumeLayout(false);
@@ -300,5 +364,9 @@
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.PictureBox picImage;
+        private System.Windows.Forms.Label lblAnswer4;
+        private System.Windows.Forms.Label lblAnswer3;
+        private System.Windows.Forms.Label lblAnswer2;
+        private System.Windows.Forms.Label lblAnswer1;
     }
 }

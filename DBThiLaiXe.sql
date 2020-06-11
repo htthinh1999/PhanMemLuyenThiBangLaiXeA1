@@ -52,14 +52,12 @@ create table ThiSinh
 	foreign key (Username) references TaiKhoan(Username)
 )
 
-
-
 create table KetQua
 (
 	STT int identity(1,1) primary key,
 	MaThiSinh varchar(10) not null,
-	LanThi int not null,
 	ThoiGian datetime not null,
+	LanThi int not null,
 	KetQua varchar(5) not null,
 	foreign key (MaThiSinh) references ThiSinh(MaThiSinh)
 )
@@ -70,305 +68,305 @@ insert into Phan values(2,N'Biển báo')
 
 insert into Phan values(3,N'Sa hình')
 
-insert into CauHoi values('001', N'Khái niệm “đường bộ” được hiểu như thế nào là đúng?“Đường bộ” gồm:',1,'/images')
+insert into CauHoi values('001', N'Khái niệm “đường bộ” được hiểu như thế nào là đúng?“Đường bộ” gồm:',1,'')
 
-insert into CauHoi values('002', N'“Vạch kẻ đường” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('002', N'“Vạch kẻ đường” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('003', N'Khái niệm “phần đường xe chạy” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('003', N'Khái niệm “phần đường xe chạy” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('004', N'Khái niệm “làn đường” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('004', N'Khái niệm “làn đường” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('005', N'Khái niệm “đường phố” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('005', N'Khái niệm “đường phố” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('006', N'Khái niệm “dải phân cách” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('006', N'Khái niệm “dải phân cách” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('007', N'Dải phân cách trên đường bộ có những loại nào?',1,'/images')
+insert into CauHoi values('007', N'Dải phân cách trên đường bộ có những loại nào?',1,'')
 
-insert into CauHoi values('008', N'Khái niệm “đường ưu tiên” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('008', N'Khái niệm “đường ưu tiên” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('009', N'“Phương tiện giao thông đường bộ” gồm những loại nào?',1,'/images')
+insert into CauHoi values('009', N'“Phương tiện giao thông đường bộ” gồm những loại nào?',1,'')
 
-insert into CauHoi values('010', N'Khái niệm “phương tiện giao thông cơ giới đường bộ” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('010', N'Khái niệm “phương tiện giao thông cơ giới đường bộ” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('011', N'“Phương tiện tham gia giao thông đường bộ” gồm những loại nào?',1,'/images')
+insert into CauHoi values('011', N'“Phương tiện tham gia giao thông đường bộ” gồm những loại nào?',1,'')
 
-insert into CauHoi values('012', N'“Người tham gia giao thông đường bộ” gồm những đối tượng nào?',1,'/images')
+insert into CauHoi values('012', N'“Người tham gia giao thông đường bộ” gồm những đối tượng nào?',1,'')
 
-insert into CauHoi values('013', N'Khái niệm “người điều khiển giao thông” được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('013', N'Khái niệm “người điều khiển giao thông” được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('014', N'Hành vi nào ghi ở dưới đây bị nghiêm cấm?',1,'/images')
+insert into CauHoi values('014', N'Hành vi nào ghi ở dưới đây bị nghiêm cấm?',1,'')
 
-insert into CauHoi values('015', N'Những hành vi nào ghi ở dưới đây bị nghiêm cấm?',1,'/images')
+insert into CauHoi values('015', N'Những hành vi nào ghi ở dưới đây bị nghiêm cấm?',1,'')
 
-insert into CauHoi values('016', N'Người điều khiển phương tiện giao thông đường bộ mà trong cơ thể có chất ma túy có bị nghiêm cấm hay không?',1,'/images')
+insert into CauHoi values('016', N'Người điều khiển phương tiện giao thông đường bộ mà trong cơ thể có chất ma túy có bị nghiêm cấm hay không?',1,'')
 
-insert into CauHoi values('017', N' Người điều khiển xe ô tô, xe máy kéo, xe máy chuyên dùng trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá bao nhiêu thì bị cấm?',1,'/images')
+insert into CauHoi values('017', N' Người điều khiển xe ô tô, xe máy kéo, xe máy chuyên dùng trên đường mà trong máu hoặc hơi thở có nồng độ cồn vượt quá bao nhiêu thì bị cấm?',1,'')
 
-insert into CauHoi values('018', N'Người điều khiển xe mô tô, xe gắn máy trên đường mà trong máu có nồng độ cồn vượt quá bao nhiêu thì bị cấm?',1,'/images')
+insert into CauHoi values('018', N'Người điều khiển xe mô tô, xe gắn máy trên đường mà trong máu có nồng độ cồn vượt quá bao nhiêu thì bị cấm?',1,'')
 
-insert into CauHoi values('019', N'Người điều khiển xe mô tô, xe gắn máy trên đường mà trong khí thở có nồng độ cồn vượt quá bao nhiêu thì bị cấm ?',1,'/images')
+insert into CauHoi values('019', N'Người điều khiển xe mô tô, xe gắn máy trên đường mà trong khí thở có nồng độ cồn vượt quá bao nhiêu thì bị cấm ?',1,'')
 
-insert into CauHoi values('020', N'Hành vi giao xe cơ giới, xe máy chuyên dùng cho người không đủ điều kiện để điều khiển xe tham gia giao thông có bị nghiêm cấm hay không?',1,'/images')
+insert into CauHoi values('020', N'Hành vi giao xe cơ giới, xe máy chuyên dùng cho người không đủ điều kiện để điều khiển xe tham gia giao thông có bị nghiêm cấm hay không?',1,'')
 
-insert into CauHoi values('021', N'Hành vi điều khiển xe cơ giới chạy quá tốc độ quy định, giành đường, vượt ẩu có bị nghiêm cấm hay không?',1,'/images')
+insert into CauHoi values('021', N'Hành vi điều khiển xe cơ giới chạy quá tốc độ quy định, giành đường, vượt ẩu có bị nghiêm cấm hay không?',1,'')
 
-insert into CauHoi values('022', N'Những hành vi nào sau đây bị cấm?',1,'/images')
+insert into CauHoi values('022', N'Những hành vi nào sau đây bị cấm?',1,'')
 
-insert into CauHoi values('023', N'Các hành vi nào sau đây bị nghiêm cấm?',1,'/images')
+insert into CauHoi values('023', N'Các hành vi nào sau đây bị nghiêm cấm?',1,'')
 
-insert into CauHoi values('024', N'Hành vi bỏ trốn sau khi gây tai nạn để trốn tránh trách nhiệm hoặc khi có điều kiện mà cố ý không cứu giúp người bị tai nạn giao thông có bị nghiêm cấm hay không?',1,'/images')
+insert into CauHoi values('024', N'Hành vi bỏ trốn sau khi gây tai nạn để trốn tránh trách nhiệm hoặc khi có điều kiện mà cố ý không cứu giúp người bị tai nạn giao thông có bị nghiêm cấm hay không?',1,'')
 
-insert into CauHoi values('025', N'Khi xảy ra tai nạn giao thông, những hành vi nào ghi ở dưới đây bị nghiêm cấm?',1,'/images')
+insert into CauHoi values('025', N'Khi xảy ra tai nạn giao thông, những hành vi nào ghi ở dưới đây bị nghiêm cấm?',1,'')
 
-insert into CauHoi values('026', N'Việc sản xuất, mua bán, sử dụng biển xe cơ giới, xe máy chuyên dùng được quy định như thế nào trong Luật giao thông đường bộ ?',1,'/images')
+insert into CauHoi values('026', N'Việc sản xuất, mua bán, sử dụng biển xe cơ giới, xe máy chuyên dùng được quy định như thế nào trong Luật giao thông đường bộ ?',1,'')
 
-insert into CauHoi values('027', N'Người lái xe không được vượt xe khác khi gặp trường hợp nào ghi ở dưới đây?',1,'/images')
+insert into CauHoi values('027', N'Người lái xe không được vượt xe khác khi gặp trường hợp nào ghi ở dưới đây?',1,'')
 
-insert into CauHoi values('028', N'Người điều khiển xe mô tô hai bánh, ba bánh, xe gắn máy có được phép sử dụng xe để kéo, đẩy các xe khác, vật khác khi tham gia giao thông không?',1,'/images')
+insert into CauHoi values('028', N'Người điều khiển xe mô tô hai bánh, ba bánh, xe gắn máy có được phép sử dụng xe để kéo, đẩy các xe khác, vật khác khi tham gia giao thông không?',1,'')
 
-insert into CauHoi values('029', N'Người ngồi trên xe mô tô hai bánh, ba bánh, xe gắn máy khi tham gia giao thông không được thực hiện những hành vi nào sau đây?',1,'/images')
+insert into CauHoi values('029', N'Người ngồi trên xe mô tô hai bánh, ba bánh, xe gắn máy khi tham gia giao thông không được thực hiện những hành vi nào sau đây?',1,'')
 
-insert into CauHoi values('030', N'Người ngồi trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy khi tham gia giao thông có được mang, vác vật cồng kềnh hay không?',1,'/images')
+insert into CauHoi values('030', N'Người ngồi trên xe mô tô hai bánh, xe mô tô ba bánh, xe gắn máy khi tham gia giao thông có được mang, vác vật cồng kềnh hay không?',1,'')
 
-insert into CauHoi values('031', N'Khi điều khiển xe mô tô hai bánh, mô tô ba bánh, xe gắn máy những hành vi nào không được phép?',1,'/images')
+insert into CauHoi values('031', N'Khi điều khiển xe mô tô hai bánh, mô tô ba bánh, xe gắn máy những hành vi nào không được phép?',1,'')
 
-insert into CauHoi values('032', N'Bảo đảm trật tự an toàn giao thông đường bộ là trách nhiệm của ai?',1,'/images')
+insert into CauHoi values('032', N'Bảo đảm trật tự an toàn giao thông đường bộ là trách nhiệm của ai?',1,'')
 
-insert into CauHoi values('033', N'Tại nơi đường giao nhau, khi đèn điều khiển giao thông có tín hiệu vàng, người điều khiển phương tiện như thế nào?',1,'/images')
+insert into CauHoi values('033', N'Tại nơi đường giao nhau, khi đèn điều khiển giao thông có tín hiệu vàng, người điều khiển phương tiện như thế nào?',1,'')
 
-insert into CauHoi values('034', N'Biển báo hiệu đường bộ gồm những nhóm nào, ý nghĩa của từng nhóm?',1,'/images')
+insert into CauHoi values('034', N'Biển báo hiệu đường bộ gồm những nhóm nào, ý nghĩa của từng nhóm?',1,'')
 
-insert into CauHoi values('035', N'Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh bằng hai tay hoặc một tay giang ngang để báo hiệu thì người tham gia giao thông phải đi như thế nào là đúng quy tắc giao thông?',1,'/images')
+insert into CauHoi values('035', N'Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh bằng hai tay hoặc một tay giang ngang để báo hiệu thì người tham gia giao thông phải đi như thế nào là đúng quy tắc giao thông?',1,'')
 
-insert into CauHoi values('036', N'Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh tay giơ thẳng đứng để báo hiệu thì người tham gia giao thông phải đi như thế nào?',1,'/images')
+insert into CauHoi values('036', N'Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh tay giơ thẳng đứng để báo hiệu thì người tham gia giao thông phải đi như thế nào?',1,'')
 
-insert into CauHoi values('037', N'Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh bằng tay phải giơ về phía trước để báo hiệu thì người tham gia giao thông phải đi như thế nào?',1,'/images')
+insert into CauHoi values('037', N'Tại nơi đường giao nhau, khi người điều khiển giao thông ra hiệu lệnh bằng tay phải giơ về phía trước để báo hiệu thì người tham gia giao thông phải đi như thế nào?',1,'')
 
-insert into CauHoi values('038', N'Trên đường giao thông, khi hiệu lệnh của người điều khiển giao thông trái với hiệu lệnh của đèn hoặc biển báo hiệu thì người tham gia giao thông phải chấp hành theo hiệu lệnh nào?',1,'/images')
+insert into CauHoi values('038', N'Trên đường giao thông, khi hiệu lệnh của người điều khiển giao thông trái với hiệu lệnh của đèn hoặc biển báo hiệu thì người tham gia giao thông phải chấp hành theo hiệu lệnh nào?',1,'')
 
-insert into CauHoi values('039', N'Tại nơi có biển báo hiệu cố định lại có báo hiệu tạm thời thì người tham gia giao thông phải chấp hành hiệu lệnh của báo hiệu nào?',1,'/images')
+insert into CauHoi values('039', N'Tại nơi có biển báo hiệu cố định lại có báo hiệu tạm thời thì người tham gia giao thông phải chấp hành hiệu lệnh của báo hiệu nào?',1,'')
 
-insert into CauHoi values('040', N'Trên đường có nhiều làn đường cho xe đi cùng chiều được phân biệt bằng vạch kẻ phân làn đường, người điều khiển phương tiện phải cho xe đi như thế nào?',1,'/images')
+insert into CauHoi values('040', N'Trên đường có nhiều làn đường cho xe đi cùng chiều được phân biệt bằng vạch kẻ phân làn đường, người điều khiển phương tiện phải cho xe đi như thế nào?',1,'')
 
-insert into CauHoi values('041', N'Trên đường một chiều có vạch kẻ phân làn đường, xe thô sơ và xe cơ giới phải đi như thế nào là đúng quy tắc giao thông?',1,'/images')
+insert into CauHoi values('041', N'Trên đường một chiều có vạch kẻ phân làn đường, xe thô sơ và xe cơ giới phải đi như thế nào là đúng quy tắc giao thông?',1,'')
 
-insert into CauHoi values('042', N'Trên đường có nhiều làn đường, người điều khiển phương tiện tham gia giao thông sử dụng làn đường như thế nào là đúng?',1,'/images')
+insert into CauHoi values('042', N'Trên đường có nhiều làn đường, người điều khiển phương tiện tham gia giao thông sử dụng làn đường như thế nào là đúng?',1,'')
 
-insert into CauHoi values('043', N'Xe sau có thể vượt lên bên phải xe khác đang chạy phía trước trong trường hợp nào?',1,'/images')
+insert into CauHoi values('043', N'Xe sau có thể vượt lên bên phải xe khác đang chạy phía trước trong trường hợp nào?',1,'')
 
-insert into CauHoi values('044', N'Người lái xe phải làm gì khi quay đầu xe trên cầu,gầm cầu vượt, đường ngầm hay khu vực đường bộ giao nhau cùng mức với đường sắt?',1,'/images')
+insert into CauHoi values('044', N'Người lái xe phải làm gì khi quay đầu xe trên cầu,gầm cầu vượt, đường ngầm hay khu vực đường bộ giao nhau cùng mức với đường sắt?',1,'')
 
-insert into CauHoi values('045', N'Khi muốn chuyển hướng, người lái xe phải thực hiện như thế nào?',1,'/images')
+insert into CauHoi values('045', N'Khi muốn chuyển hướng, người lái xe phải thực hiện như thế nào?',1,'')
 
-insert into CauHoi values('046', N'Khi tránh xe đi ngược chiều, các xe phải nhường đường nhe thế nào là đúng?',1,'/images')
+insert into CauHoi values('046', N'Khi tránh xe đi ngược chiều, các xe phải nhường đường nhe thế nào là đúng?',1,'')
 
-insert into CauHoi values('047', N'Ban đêm xe cơ giới đi ngược chiều gặp nhau, đèn chiếu sáng phải sử dụng như thế nào?',1,'/images')
+insert into CauHoi values('047', N'Ban đêm xe cơ giới đi ngược chiều gặp nhau, đèn chiếu sáng phải sử dụng như thế nào?',1,'')
 
-insert into CauHoi values('048', N'Khi có tín hiệu của xe ưu tiên, người tham gia giao thông phải làm gì?',1,'/images')
+insert into CauHoi values('048', N'Khi có tín hiệu của xe ưu tiên, người tham gia giao thông phải làm gì?',1,'')
 
-insert into CauHoi values('049', N'Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến người điều khiển phương tiện phải nhường đường như thế nào?',1,'/images')
+insert into CauHoi values('049', N'Tại nơi đường giao nhau có báo hiệu đi theo vòng xuyến người điều khiển phương tiện phải nhường đường như thế nào?',1,'')
 
-insert into CauHoi values('050', N'Tại nơi đường giao nhau, người lái xe đang đi trên đường không ưu tiên phải nhường đường như thế nào?',1,'/images')
+insert into CauHoi values('050', N'Tại nơi đường giao nhau, người lái xe đang đi trên đường không ưu tiên phải nhường đường như thế nào?',1,'')
 
-insert into CauHoi values('051', N'Tại nơi đường giao nhau không có báo hiệu đi theo vòng xuyến, người điều khiển phương tiện phải nhường đường như thế nào là đúng quy tắc giao thông?',1,'/images')
+insert into CauHoi values('051', N'Tại nơi đường giao nhau không có báo hiệu đi theo vòng xuyến, người điều khiển phương tiện phải nhường đường như thế nào là đúng quy tắc giao thông?',1,'')
 
-insert into CauHoi values('052', N'Trên đoạn đường bộ giao nhau cùng mức với đường sắt, cầu đường bộ đi chung với đường sắt thì loại phương tiện nào được quyền ưu tiên đi trước?',1,'/images')
+insert into CauHoi values('052', N'Trên đoạn đường bộ giao nhau cùng mức với đường sắt, cầu đường bộ đi chung với đường sắt thì loại phương tiện nào được quyền ưu tiên đi trước?',1,'')
 
-insert into CauHoi values('053', N'Tại nơi đường bộ giao nhau cùng mức với đường sắt chỉ có đèn tín hiệu hoặc chuông báo hiệu, khi đèn tín hiệu màu đỏ đã bật sáng hoặc có tiếng chuông báo hiệu, người tham gia giao thông phải dừng lại ngay và giữ khoảng cách tối thiểu bao nhiêu mét tính từ ray gần nhất?',1,'/images')
+insert into CauHoi values('053', N'Tại nơi đường bộ giao nhau cùng mức với đường sắt chỉ có đèn tín hiệu hoặc chuông báo hiệu, khi đèn tín hiệu màu đỏ đã bật sáng hoặc có tiếng chuông báo hiệu, người tham gia giao thông phải dừng lại ngay và giữ khoảng cách tối thiểu bao nhiêu mét tính từ ray gần nhất?',1,'')
 
-insert into CauHoi values('054', N'Người lái xe phải làm gì khi điều khiển xe vào đường cao tốc?',1,'/images')
+insert into CauHoi values('054', N'Người lái xe phải làm gì khi điều khiển xe vào đường cao tốc?',1,'')
 
-insert into CauHoi values('055', N'Người lái xe phải làm gì khi điều khiển x era khỏi làn đường cao tốc?',1,'/images')
+insert into CauHoi values('055', N'Người lái xe phải làm gì khi điều khiển x era khỏi làn đường cao tốc?',1,'')
 
-insert into CauHoi values('056', N'Những trường hợp nào ghi ở dưới đây không được đi vào đường cao tốc trừ người, phương tiện, thiết bị phục vụ cho việc quản lí, bảo trì đường cao tốc?',1,'/images')
+insert into CauHoi values('056', N'Những trường hợp nào ghi ở dưới đây không được đi vào đường cao tốc trừ người, phương tiện, thiết bị phục vụ cho việc quản lí, bảo trì đường cao tốc?',1,'')
 
-insert into CauHoi values('057', N'Người điều khiển phương tiện tham gia giao thông trong hầm đường bộ ngoài việc phải tuân thủ các quy tắc giao thông còn phải thực hiện những quy định nào ghi ở dưới đây?',1,'/images')
+insert into CauHoi values('057', N'Người điều khiển phương tiện tham gia giao thông trong hầm đường bộ ngoài việc phải tuân thủ các quy tắc giao thông còn phải thực hiện những quy định nào ghi ở dưới đây?',1,'')
 
-insert into CauHoi values('058', N'Người ngồi trên xe mô tô 2 bánh, xe mô tô 3 bánh, xe gắn máy phải đội mũ bảo hiểm có cài quay đúng quy cách khi nào?',1,'/images')
+insert into CauHoi values('058', N'Người ngồi trên xe mô tô 2 bánh, xe mô tô 3 bánh, xe gắn máy phải đội mũ bảo hiểm có cài quay đúng quy cách khi nào?',1,'')
 
-insert into CauHoi values('059', N'Khi điều khiển xe mô tô 2 bánh, xe gắn máy được phép chở tối đa 2 người trong những trường hợp nào?',1,'/images')
+insert into CauHoi values('059', N'Khi điều khiển xe mô tô 2 bánh, xe gắn máy được phép chở tối đa 2 người trong những trường hợp nào?',1,'')
 
-insert into CauHoi values('060', N'Người điều khiển xe mô tô 2 bánh, xe mô tô 3 bánh, xe gắn máy không được thực hiện những hành vi nào ghi ở dưới đây?',1,'/images')
+insert into CauHoi values('060', N'Người điều khiển xe mô tô 2 bánh, xe mô tô 3 bánh, xe gắn máy không được thực hiện những hành vi nào ghi ở dưới đây?',1,'')
 
-insert into CauHoi values('061', N'Người điều khiển, người ngồi trên xe đạp máy phải đội mũ bảo hiểm có cài quay đúng quy cách khi nào?',1,'/images')
+insert into CauHoi values('061', N'Người điều khiển, người ngồi trên xe đạp máy phải đội mũ bảo hiểm có cài quay đúng quy cách khi nào?',1,'')
 
-insert into CauHoi values('062', N'Cơ quan nào quy định các đoạn đường cấm đi, đường đi một chiều, nơi cấm dừng, cấm đỗ, cấm quay đầu xe, lắp đặt báo hiệu đường bộ thuộc địa phương quản lí?',1,'/images')
+insert into CauHoi values('062', N'Cơ quan nào quy định các đoạn đường cấm đi, đường đi một chiều, nơi cấm dừng, cấm đỗ, cấm quay đầu xe, lắp đặt báo hiệu đường bộ thuộc địa phương quản lí?',1,'')
 
-insert into CauHoi values('063', N'Người điều khiển phương tiện và những người liên quan trực tiếp đến vụ tai nạn có trách nhiệm gì?',1,'/images')
+insert into CauHoi values('063', N'Người điều khiển phương tiện và những người liên quan trực tiếp đến vụ tai nạn có trách nhiệm gì?',1,'')
 
-insert into CauHoi values('064', N'Những người có mặt tại nơi xảy ra tai nạn giao thông có trách nhiệm gì?',1,'/images')
+insert into CauHoi values('064', N'Những người có mặt tại nơi xảy ra tai nạn giao thông có trách nhiệm gì?',1,'')
 
-insert into CauHoi values('065', N'Khi điều khiển xe chạy trên đường, người lái xe phải mang theo các loại giấy tờ gì?',1,'/images')
+insert into CauHoi values('065', N'Khi điều khiển xe chạy trên đường, người lái xe phải mang theo các loại giấy tờ gì?',1,'')
 
-insert into CauHoi values('066', N'Người đủ bao nhiêu tuổi trở lên thì được điều khiển xe mô tô 2 bánh, xe mô tô 3 bánh có dung tích xilanh từ 50 cm3 trở lên và các loại xe có kết cấu tương tự, xe ô tô tải, máy kéo có trọng tải dưới 3,5 tấn; xe ô tô chở người dưới 9 chỗ ngồi?',1,'/images')
+insert into CauHoi values('066', N'Người đủ bao nhiêu tuổi trở lên thì được điều khiển xe mô tô 2 bánh, xe mô tô 3 bánh có dung tích xilanh từ 50 cm3 trở lên và các loại xe có kết cấu tương tự, xe ô tô tải, máy kéo có trọng tải dưới 3,5 tấn; xe ô tô chở người dưới 9 chỗ ngồi?',1,'')
 
-insert into CauHoi values('067', N'Tại ngã ba hoặc ngã tư không có đảo an toàn, người lái xe phải nhường đường như thế nào là đúng trong các trường hợp dưới đây?',1,'/images')
+insert into CauHoi values('067', N'Tại ngã ba hoặc ngã tư không có đảo an toàn, người lái xe phải nhường đường như thế nào là đúng trong các trường hợp dưới đây?',1,'')
 
-insert into CauHoi values('068', N'Người đủ 16 tuổi được điều khiển các loại xe nào dưới đây?',1,'/images')
+insert into CauHoi values('068', N'Người đủ 16 tuổi được điều khiển các loại xe nào dưới đây?',1,'')
 
-insert into CauHoi values('069', N'Khi phát hiện hành vi giả khai báo mất hoặc tẩy xóa, làm sai lệch các thông tin trên giấy phép lái xe; sử dụng giấy phép lái xe hoặc đổi hồ sơ giả; có hành vi cố tình gian dối để được đổi, cấp mới, cấp lại giấy phép lái xe, ngoài việc bị cơ quan quản lý giấy phép lái xe quyết định thu hồi giấy phép lái xe và hồ sơ gốc còn phải chịu trách nhiệm trước pháp luật, người lái xe không được cấp giấy phép lái xe trong thời gian bao nhiêu năm??',1,'/images')
+insert into CauHoi values('069', N'Khi phát hiện hành vi giả khai báo mất hoặc tẩy xóa, làm sai lệch các thông tin trên giấy phép lái xe; sử dụng giấy phép lái xe hoặc đổi hồ sơ giả; có hành vi cố tình gian dối để được đổi, cấp mới, cấp lại giấy phép lái xe, ngoài việc bị cơ quan quản lý giấy phép lái xe quyết định thu hồi giấy phép lái xe và hồ sơ gốc còn phải chịu trách nhiệm trước pháp luật, người lái xe không được cấp giấy phép lái xe trong thời gian bao nhiêu năm??',1,'')
 
-insert into CauHoi values('070', N'Người lái xe mô tô xử lý như thế nào khi cho xe mô tô phía sau vượt?',1,'/images')
+insert into CauHoi values('070', N'Người lái xe mô tô xử lý như thế nào khi cho xe mô tô phía sau vượt?',1,'')
 
-insert into CauHoi values('071', N'Trong các trường hợp dưới đây, để đảm bảo an toàn khi tham gia giao thông, người lái xe mô tô cần thực hiện như thế nào?',1,'/images')
+insert into CauHoi values('071', N'Trong các trường hợp dưới đây, để đảm bảo an toàn khi tham gia giao thông, người lái xe mô tô cần thực hiện như thế nào?',1,'')
 
-insert into CauHoi values('072', N'Đường bộ trong khu vực đông dân cư gồm những đường nào?',1,'/images')
+insert into CauHoi values('072', N'Đường bộ trong khu vực đông dân cư gồm những đường nào?',1,'')
 
-insert into CauHoi values('073', N'Trên đường bộ trong khu vực đông dân cư, xe mô tô hai bánh, xe gắn máy tham gia giao thông với tốc độ tối đa cho phép là bao nhiêu?',1,'/images')
+insert into CauHoi values('073', N'Trên đường bộ trong khu vực đông dân cư, xe mô tô hai bánh, xe gắn máy tham gia giao thông với tốc độ tối đa cho phép là bao nhiêu?',1,'')
 
-insert into CauHoi values('074', N'Trên đường bộ trong khu vực đông dân cư, loại xe nào tham gia giao thông với tốc độ tối đa cho phép là 40 km/h?',1,'/images')
+insert into CauHoi values('074', N'Trên đường bộ trong khu vực đông dân cư, loại xe nào tham gia giao thông với tốc độ tối đa cho phép là 40 km/h?',1,'')
 
-insert into CauHoi values('075', N'Trên đường bộ ngoài khu đông dân cư, loại xe nào tham gia giao thông với tốc độ tối đa cho phép là 50 km/h?',1,'/images')
+insert into CauHoi values('075', N'Trên đường bộ ngoài khu đông dân cư, loại xe nào tham gia giao thông với tốc độ tối đa cho phép là 50 km/h?',1,'')
 
-insert into CauHoi values('076', N'Khái niệm về văn hóa giao thông được hiểu như thế nào là đúng?',1,'/images')
+insert into CauHoi values('076', N'Khái niệm về văn hóa giao thông được hiểu như thế nào là đúng?',1,'')
 
-insert into CauHoi values('077', N'Người lái xe cố tình vi phạm Luật giao thông đường bộ, không phân biệt làn đường, vạch phân làn, phóng nhanh, vượt ẩu, vượt đèn đỏ, đi vào đường cấm, đường một chiều được coi là hành vi nào trong các hành vi sau đây?',1,'/images')
+insert into CauHoi values('077', N'Người lái xe cố tình vi phạm Luật giao thông đường bộ, không phân biệt làn đường, vạch phân làn, phóng nhanh, vượt ẩu, vượt đèn đỏ, đi vào đường cấm, đường một chiều được coi là hành vi nào trong các hành vi sau đây?',1,'')
 
-insert into CauHoi values('078', N'Trong các hành vi dưới đây, người lái xe mô tô có văn hóa giao thông phải ứng xử như thế nào?',1,'/images')
+insert into CauHoi values('078', N'Trong các hành vi dưới đây, người lái xe mô tô có văn hóa giao thông phải ứng xử như thế nào?',1,'')
 
-insert into CauHoi values('079', N'Trong các hành vi dưới đây, người lái xe mô tô có văn hóa giao thông phải ứng xử như thế nào?',1,'/images')
+insert into CauHoi values('079', N'Trong các hành vi dưới đây, người lái xe mô tô có văn hóa giao thông phải ứng xử như thế nào?',1,'')
 
-insert into CauHoi values('080', N'Người có văn hóa giao thông, khi điều khiển xe cơ giới tham gia giao thông đường bộ phải đảm bảo các điều kiện gì?',1,'/images')
+insert into CauHoi values('080', N'Người có văn hóa giao thông, khi điều khiển xe cơ giới tham gia giao thông đường bộ phải đảm bảo các điều kiện gì?',1,'')
 
-insert into CauHoi values('081', N'Biển nào cấm người đi bộ?',2,'/images/81')
+insert into CauHoi values('081', N'Biển nào cấm người đi bộ?',2,'81')
 
-insert into CauHoi values('082', N'Gặp biển nào người lái xe phải nhường đường cho người đi bộ?',2,'/images/82')
+insert into CauHoi values('082', N'Gặp biển nào người lái xe phải nhường đường cho người đi bộ?',2,'82')
 
-insert into CauHoi values('083', N'Biển nào chỉ đường dành cho người đi bộ, các loại xe không được đi vào khi gặp biển này?',2,'/images/83')
+insert into CauHoi values('083', N'Biển nào chỉ đường dành cho người đi bộ, các loại xe không được đi vào khi gặp biển này?',2,'83')
 
-insert into CauHoi values('084', N' Biển nào báo hiệu sắp đến chỗ giao nhau nguy hiểm?',2,'/images/84')
+insert into CauHoi values('084', N' Biển nào báo hiệu sắp đến chỗ giao nhau nguy hiểm?',2,'84')
 
-insert into CauHoi values('085', N'Biển nào báo hiệu sắp đến chỗ giao nhau với đường sắt có rào chắn?',2,'/images/85')
+insert into CauHoi values('085', N'Biển nào báo hiệu sắp đến chỗ giao nhau với đường sắt có rào chắn?',2,'85')
 
-insert into CauHoi values('086', N'Biển nào báo hiệu giao nhau có tín hiệu đèn?',2,'/images/86')
+insert into CauHoi values('086', N'Biển nào báo hiệu giao nhau có tín hiệu đèn?',2,'86')
 
-insert into CauHoi values('087', N'Biển nào báo hiệu nguy hiểm giao nhau với đường sắt?',2,'/images/87')
+insert into CauHoi values('087', N'Biển nào báo hiệu nguy hiểm giao nhau với đường sắt?',2,'87')
 
-insert into CauHoi values('088', N'Biển nào báo hiệu đường sắt giao nhau với đường bộ không có rào chắn?',2,'/images/88')
+insert into CauHoi values('088', N'Biển nào báo hiệu đường sắt giao nhau với đường bộ không có rào chắn?',2,'88')
 
-insert into CauHoi values('089', N'Biển nào báo hiệu “Hết đoạn đường ưu tiên”?',2,'/images/89')
+insert into CauHoi values('089', N'Biển nào báo hiệu “Hết đoạn đường ưu tiên”?',2,'89')
 
-insert into CauHoi values('090', N'Biển nào báo hiệu, chỉ dẫn xe đi trên đường này được quyền ưu tiên qua nơi giao nhau?',2,'/images/90')
+insert into CauHoi values('090', N'Biển nào báo hiệu, chỉ dẫn xe đi trên đường này được quyền ưu tiên qua nơi giao nhau?',2,'90')
 
-insert into CauHoi values('091', N'Biển nào báo hiệu giao nhau với đường không ưu tiên?',2,'/images/91')
+insert into CauHoi values('091', N'Biển nào báo hiệu giao nhau với đường không ưu tiên?',2,'91')
 
-insert into CauHoi values('092', N'Biển nào báo hiệu giao nhau với đường ưu tiên?',2,'/images/92')
+insert into CauHoi values('092', N'Biển nào báo hiệu giao nhau với đường ưu tiên?',2,'92')
 
-insert into CauHoi values('093', N'Biển nào báo hiệu giao nhau với đường ưu tiên?',2,'/images/93')
+insert into CauHoi values('093', N'Biển nào báo hiệu giao nhau với đường ưu tiên?',2,'93')
 
-insert into CauHoi values('094', N'Biển nào báo hiệu “Đường giao nhau” của các tuyến đường cùng cấp?',2,'/images/94')
+insert into CauHoi values('094', N'Biển nào báo hiệu “Đường giao nhau” của các tuyến đường cùng cấp?',2,'94')
 
-insert into CauHoi values('095', N'Biển nào báo hiệu giao nhau với đường không ưu tiên?',2,'/images/95')
+insert into CauHoi values('095', N'Biển nào báo hiệu giao nhau với đường không ưu tiên?',2,'95')
 
-insert into CauHoi values('096', N'Biển nào báo hiệu đường hai chiều?',2,'/images/96')
+insert into CauHoi values('096', N'Biển nào báo hiệu đường hai chiều?',2,'96')
 
-insert into CauHoi values('097', N'Biển nào báo hiệu phải giảm tốc độ, nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp?',2,'/images/97')
+insert into CauHoi values('097', N'Biển nào báo hiệu phải giảm tốc độ, nhường đường cho xe cơ giới đi ngược chiều qua đường hẹp?',2,'97')
 
-insert into CauHoi values('098', N'Biển nào chỉ dẫn được ưu tiên qua đường hẹp?',2,'/images/98')
+insert into CauHoi values('098', N'Biển nào chỉ dẫn được ưu tiên qua đường hẹp?',2,'98')
 
-insert into CauHoi values('099', N'Biển nào báo hiệu cấm xe mô tô ba bánh đi vào?',2,'/images/99')
+insert into CauHoi values('099', N'Biển nào báo hiệu cấm xe mô tô ba bánh đi vào?',2,'99')
 
-insert into CauHoi values('100', N'Biển nào báo hiệu cấm xe mô tô hai bánh đi vào?',2,'/images/100')
+insert into CauHoi values('100', N'Biển nào báo hiệu cấm xe mô tô hai bánh đi vào?',2,'100')
 
-insert into CauHoi values('101', N'Khai gặp biển nào thì xe mô tô hai bánh được đi vào?',2,'/images/101')
+insert into CauHoi values('101', N'Khai gặp biển nào thì xe mô tô hai bánh được đi vào?',2,'101')
 
-insert into CauHoi values('102', N'Biển nào xe mô tô hai bánh được đi vào?',2,'/images/102')
+insert into CauHoi values('102', N'Biển nào xe mô tô hai bánh được đi vào?',2,'102')
 
-insert into CauHoi values('103', N'Biển nào xe mô tô hai bánh không được đi vào?',2,'/images/103')
+insert into CauHoi values('103', N'Biển nào xe mô tô hai bánh không được đi vào?',2,'103')
 
-insert into CauHoi values('104', N'Ba biển này có ý nghĩa hiệu lực như thế nào?',2,'/images/104')
+insert into CauHoi values('104', N'Ba biển này có ý nghĩa hiệu lực như thế nào?',2,'104')
 
-insert into CauHoi values('105', N'Biển nào cấm quay xe?',2,'/images/105')
+insert into CauHoi values('105', N'Biển nào cấm quay xe?',2,'105')
 
-insert into CauHoi values('106', N'Biển nào cấm xe rẽ trái?',2,'/images/106')
+insert into CauHoi values('106', N'Biển nào cấm xe rẽ trái?',2,'106')
 
-insert into CauHoi values('107', N'Khi gặp biển nào xe được rẽ trái?',2,'/images/107')
+insert into CauHoi values('107', N'Khi gặp biển nào xe được rẽ trái?',2,'107')
 
-insert into CauHoi values('108', N'Khi gặp biển nào xe ưu tiên theo luật định vẫn phải dừng lại?',2,'/images/108')
+insert into CauHoi values('108', N'Khi gặp biển nào xe ưu tiên theo luật định vẫn phải dừng lại?',2,'108')
 
-insert into CauHoi values('109', N'Khi đến chỗ giao nhau, gặp biển nào thì người lái xe không được cho xe đi thẳng, phải rẽ sang hướng khác?',2,'/images/109')
+insert into CauHoi values('109', N'Khi đến chỗ giao nhau, gặp biển nào thì người lái xe không được cho xe đi thẳng, phải rẽ sang hướng khác?',2,'109')
 
-insert into CauHoi values('110', N'Khi gặp biển này, xe lam và mô tô ba bánh có được phép rẽ trái hay rẽ phải hay không?',2,'/images/110')
+insert into CauHoi values('110', N'Khi gặp biển này, xe lam và mô tô ba bánh có được phép rẽ trái hay rẽ phải hay không?',2,'110')
 
-insert into CauHoi values('111', N'Biển này có hiệu lực đối với xe mô tô hai, ba bánh không?',2,'/images/111')
+insert into CauHoi values('111', N'Biển này có hiệu lực đối với xe mô tô hai, ba bánh không?',2,'111')
 
-insert into CauHoi values('112', N'Biển nào báo hiệu cầu vượt liên thông?',2,'/images/112')
+insert into CauHoi values('112', N'Biển nào báo hiệu cầu vượt liên thông?',2,'112')
 
-insert into CauHoi values('113', N'Biển nào báo hiệu đoạn đường hay xảy ra tai nạn?',2,'/images/113')
+insert into CauHoi values('113', N'Biển nào báo hiệu đoạn đường hay xảy ra tai nạn?',2,'113')
 
-insert into CauHoi values('114', N' Biển nào báo hiệu tuyến đường cầu vượt cắt qua?',2,'/images/114')
+insert into CauHoi values('114', N' Biển nào báo hiệu tuyến đường cầu vượt cắt qua?',2,'114')
 
-insert into CauHoi values('115', N'Biển nào chỉ dẫn tên đường trên các tuyến đường đối ngoại?',2,'/images/115')
+insert into CauHoi values('115', N'Biển nào chỉ dẫn tên đường trên các tuyến đường đối ngoại?',2,'115')
 
-insert into CauHoi values('116', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/116')
+insert into CauHoi values('116', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'116')
 
-insert into CauHoi values('117', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/117')
+insert into CauHoi values('117', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'117')
 
-insert into CauHoi values('118', N'Trường hợp này xe nào được quyền đi trước?',3,'/images/118')
+insert into CauHoi values('118', N'Trường hợp này xe nào được quyền đi trước?',3,'118')
 
-insert into CauHoi values('119', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/119')
+insert into CauHoi values('119', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'119')
 
-insert into CauHoi values('120', N'Xe nào được quyền đi trước trong trường hợp này?',3,'/images/120')
+insert into CauHoi values('120', N'Xe nào được quyền đi trước trong trường hợp này?',3,'120')
 
-insert into CauHoi values('121', N'Theo tín hiệu đèn, xe nào được phép đi?',3,'/images/121')
+insert into CauHoi values('121', N'Theo tín hiệu đèn, xe nào được phép đi?',3,'121')
 
-insert into CauHoi values('122', N'Theo tín hiệu đèn, xe nào được quyền đi là đúng quy tắc giao thông?',3,'/images/122')
+insert into CauHoi values('122', N'Theo tín hiệu đèn, xe nào được quyền đi là đúng quy tắc giao thông?',3,'122')
 
-insert into CauHoi values('123', N'Các xe đi theo mũi tên, xe nào vi phạm quy tắc giao thông?',3,'/images/123')
+insert into CauHoi values('123', N'Các xe đi theo mũi tên, xe nào vi phạm quy tắc giao thông?',3,'123')
 
-insert into CauHoi values('124', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/124')
+insert into CauHoi values('124', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'124')
 
-insert into CauHoi values('125', N'Trong trường hợp này xe nào đỗ vi phạm quy tắc giao thông?',3,'/images/125')
+insert into CauHoi values('125', N'Trong trường hợp này xe nào đỗ vi phạm quy tắc giao thông?',3,'125')
 
-insert into CauHoi values('126', N'Xe nào được quyền đi trước?',3,'/images/126')
+insert into CauHoi values('126', N'Xe nào được quyền đi trước?',3,'126')
 
-insert into CauHoi values('127', N'Theo mũi tên, những hướng nào xe gắn máy đi được?',3,'/images/127')
+insert into CauHoi values('127', N'Theo mũi tên, những hướng nào xe gắn máy đi được?',3,'127')
 
-insert into CauHoi values('128', N'Xe nào đỗ vi phạm quy tắc giao thông?',3,'/images/128')
+insert into CauHoi values('128', N'Xe nào đỗ vi phạm quy tắc giao thông?',3,'128')
 
-insert into CauHoi values('129', N'Xe nào đỗ vi phạm quy tắc giao thông?',3,'/images/129')
+insert into CauHoi values('129', N'Xe nào đỗ vi phạm quy tắc giao thông?',3,'129')
 
-insert into CauHoi values('130', N'Xe tải kéo mô tô ba bánh như hình này có đúng quy tắc giao thông không?',3,'/images/130')
+insert into CauHoi values('130', N'Xe tải kéo mô tô ba bánh như hình này có đúng quy tắc giao thông không?',3,'130')
 
-insert into CauHoi values('131', N'Xe nào được quyền đi trước trong trường hợp này?',3,'/images/131')
+insert into CauHoi values('131', N'Xe nào được quyền đi trước trong trường hợp này?',3,'131')
 
-insert into CauHoi values('132', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/132')
+insert into CauHoi values('132', N'Thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'132')
 
-insert into CauHoi values('133', N'Xe nào được quyền đi trước trong trường hợp này?',3,'/images/133')
+insert into CauHoi values('133', N'Xe nào được quyền đi trước trong trường hợp này?',3,'133')
 
-insert into CauHoi values('134', N'Xe nào vi phạm quy tắc giao thông?',3,'/images/134')
+insert into CauHoi values('134', N'Xe nào vi phạm quy tắc giao thông?',3,'134')
 
-insert into CauHoi values('135', N'Các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/135')
+insert into CauHoi values('135', N'Các xe đi như thế nào là đúng quy tắc giao thông?',3,'135')
 
-insert into CauHoi values('136', N'Theo hướng mũi tên, xe nào được phép đi?',3,'/images/136')
+insert into CauHoi values('136', N'Theo hướng mũi tên, xe nào được phép đi?',3,'136')
 
-insert into CauHoi values('137', N'Trong hình dưới đây, xe nào chấp hành đúng quy tắc giao thông?',3,'/images/137')
+insert into CauHoi values('137', N'Trong hình dưới đây, xe nào chấp hành đúng quy tắc giao thông?',3,'137')
 
-insert into CauHoi values('138', N'Theo hướng mũi tên, những hướng nào xe mô tô được phép đi.',3,'/images/138')
+insert into CauHoi values('138', N'Theo hướng mũi tên, những hướng nào xe mô tô được phép đi.',3,'138')
 
-insert into CauHoi values('139', N'Trong trường hợp này, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'/images/139')
+insert into CauHoi values('139', N'Trong trường hợp này, thứ tự các xe đi như thế nào là đúng quy tắc giao thông?',3,'139')
 
-insert into CauHoi values('140', N'Trong hình dưới, những xe nào vi phạm quy tắc giao thông?',3,'/images/140')
+insert into CauHoi values('140', N'Trong hình dưới, những xe nào vi phạm quy tắc giao thông?',3,'140')
 
-insert into CauHoi values('141', N'Trong hình dưới, những xe nào vi phạm quy tắc giao thông?',3,'/images/141')
+insert into CauHoi values('141', N'Trong hình dưới, những xe nào vi phạm quy tắc giao thông?',3,'141')
 
-insert into CauHoi values('142', N'Theo tín hiệu đèn, xe nào phải dừng lại là đúng quy tắc giao thông?',3,'/images/142')
+insert into CauHoi values('142', N'Theo tín hiệu đèn, xe nào phải dừng lại là đúng quy tắc giao thông?',3,'142')
 
-insert into CauHoi values('143', N'Bạn có được phép vượt xe mô tô phía trước không?',3,'/images/143')
+insert into CauHoi values('143', N'Bạn có được phép vượt xe mô tô phía trước không?',3,'143')
 
-insert into CauHoi values('144', N'Theo tín hiệu đèn của xe cơ giới, xe nào vi phạm quy tắc giao thông?',3,'/images/144')
+insert into CauHoi values('144', N'Theo tín hiệu đèn của xe cơ giới, xe nào vi phạm quy tắc giao thông?',3,'144')
 
-insert into CauHoi values('145', N'Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?',3,'/images/145')
+insert into CauHoi values('145', N'Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?',3,'145')
 
-insert into CauHoi values('146', N'Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?',3,'/images/146')
+insert into CauHoi values('146', N'Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?',3,'146')
 
-insert into CauHoi values('147', N'Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?',3,'/images/147')
+insert into CauHoi values('147', N'Các xe đi theo hướng mũi tên, xe nào vi phạm quy tắc giao thông?',3,'147')
 
-insert into CauHoi values('148', N' Các xe đi theo hướng mũi tên, xe nào chấp hành đúng quy tắc giao thông?',3,'/images/148')
+insert into CauHoi values('148', N' Các xe đi theo hướng mũi tên, xe nào chấp hành đúng quy tắc giao thông?',3,'148')
 
-insert into CauHoi values('149', N'Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?',3,'/images/149')
+insert into CauHoi values('149', N'Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?',3,'149')
 
-insert into CauHoi values('150', N' Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?',3,'/images/150')
+insert into CauHoi values('150', N' Các xe đi theo thứ tự nào là đúng quy tắc giao thông đường bộ?',3,'150')
 
 /* insert into Đáp án*/
 
@@ -1289,4 +1287,4 @@ insert into TaiKhoan values('htthinh', '123', 0)
 
 insert into ThiSinh values('TS001', N'Huỳnh Tấn Thịnh', '1999-09-27', 'M', N'Vạn Giã', 'htthinh')
 
-insert into KetQua values('TS001', 1, CURRENT_TIMESTAMP, '20/20')
+insert into KetQua(MaThiSinh, ThoiGian, LanThi, KetQua) values((select MaThiSinh from ThiSinh where Username='htthinh'), CURRENT_TIMESTAMP, 1, '20/20')
