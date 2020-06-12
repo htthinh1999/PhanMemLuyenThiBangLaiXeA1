@@ -283,7 +283,6 @@ namespace BTL_LTCSharp
                 timer.Stop();
                 MessageBox.Show("Phần thi đã hết giờ!", "Hết giờ!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 Submit();
-                this.Close();
             }
         }
 
@@ -333,7 +332,7 @@ namespace BTL_LTCSharp
             }
 
             // Set result of examination to history
-            string sql = "Select Max(LanThi) from KetQua where MaThiSinh = (Select MaThiSinh from ThiSinh where Username = '" + DatabaseManager.username + "')";
+            string sql = "Select COUNT(*) from KetQua where MaThiSinh = (Select MaThiSinh from ThiSinh where Username = '" + DatabaseManager.username + "')";
             int lanThi = Convert.ToInt32(DatabaseManager.executeQuery(sql).Rows[0][0]) + 1;
 
             sql = "Insert into KetQua(MaThiSinh, ThoiGian, LanThi, KetQua) values(" +
@@ -341,6 +340,7 @@ namespace BTL_LTCSharp
                 ", CURRENT_TIMESTAMP, " + lanThi + ", '" + score + "/20')";
             DatabaseManager.executeQuery(sql);
 
+            timer.Stop();
             this.Hide();
             customerForm.Show();
         }

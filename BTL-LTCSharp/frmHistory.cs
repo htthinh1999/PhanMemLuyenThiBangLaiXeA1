@@ -40,7 +40,7 @@ namespace BTL_LTCSharp
 
         void ShowHistory()
         {
-            string sql = "Select LanThi, ThoiGian, KetQua" +
+            string sql = "Select LanThi AS N'Lần Thi', ThoiGian AS N'Thời Gian', KetQua AS N'Kết Quả'" +
                             " from KetQua K inner join ThiSinh T on K.MaThiSinh = T.MaThiSinh" +
                             " where Username = '" + DatabaseManager.username + "'";
             dataHistory.DataSource = DatabaseManager.executeQuery(sql);

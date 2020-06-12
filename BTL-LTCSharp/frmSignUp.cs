@@ -41,7 +41,7 @@ namespace BTL_LTCSharp
                 sql = "Select COUNT(*) from ThiSinh";
                 int IDindex = Convert.ToInt32(DatabaseManager.executeQuery(sql).Rows[0][0]) + 1;    // Get numbers of ThiSinh
                 string maThiSinh = "TS" + Convert.ToString(IDindex).PadLeft(3, '0');
-                sql = "Insert into ThiSinh values('" + maThiSinh + "', N'" + txtFullName.Text + "', '" + cbxYear.Text + cbxMonth.Text + cbxDay.Text + "', '"
+                sql = "Insert into ThiSinh values('" + maThiSinh + "', N'" + txtFullName.Text + "', '" + Convert.ToInt32(cbxYear.Text) + Convert.ToInt32(cbxMonth.Text) + Convert.ToInt32(cbxDay.Text) + "', '"
                                                         + (cbxSex.Text.Equals("Nam") ? "M" : "F") + "', N'" + txtAddress.Text + "', '" + txtUsername.Text + "')";
                 DatabaseManager.executeQuery(sql);
                 MessageBox.Show("Chúc mừng!!\nBạn đã đăng ký thành công!!", "Đăng ký thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -96,9 +96,9 @@ namespace BTL_LTCSharp
         bool InputValid()
         {
             int day, month, year;
-            bool isDay = !cbxDay.Text.Equals("") && int.TryParse(cbxDay.Text, out day);
-            bool isMonth = !cbxMonth.Text.Equals("") && int.TryParse(cbxMonth.Text, out month);
-            bool isYear = !cbxYear.Text.Equals("") && int.TryParse(cbxYear.Text, out year);
+            bool isDay = !cbxDay.Text.Equals("") && int.TryParse(cbxDay.Text, out day) && day >= 1 && day <= 31;
+            bool isMonth = !cbxMonth.Text.Equals("") && int.TryParse(cbxMonth.Text, out month) && month >= 1 && month <= 12;
+            bool isYear = !cbxYear.Text.Equals("") && int.TryParse(cbxYear.Text, out year) && year >= 1900;
             bool isSex = (!cbxSex.Text.Equals("") && (Convert.ToString(cbxSex.Text).Equals("Nam") || Convert.ToString(cbxSex.Text).Equals("Nữ"))) ? true : false;
             bool isFullName = !txtFullName.Equals("");
             

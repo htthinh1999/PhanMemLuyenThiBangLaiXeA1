@@ -283,6 +283,14 @@
             this.cbxYear.Font = new System.Drawing.Font("Segoe UI", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbxYear.FormattingEnabled = true;
             this.cbxYear.Items.AddRange(new object[] {
+            "1990",
+            "1991",
+            "1992",
+            "1993",
+            "1994",
+            "1995",
+            "1996",
+            "1997",
             "1998",
             "1999",
             "2000",
@@ -300,7 +308,7 @@
             this.cbxYear.Name = "cbxYear";
             this.cbxYear.Size = new System.Drawing.Size(60, 31);
             this.cbxYear.TabIndex = 17;
-            this.cbxYear.Text = "1998";
+            this.cbxYear.Text = "1999";
             // 
             // label6
             // 

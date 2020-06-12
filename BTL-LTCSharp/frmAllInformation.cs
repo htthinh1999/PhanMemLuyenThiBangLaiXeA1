@@ -47,7 +47,7 @@ namespace BTL_LTCSharp
         void ShowHistory()
         {
             string sql = "Select T.MaThiSinh AS N'Mã Thí Sinh', HoTenThiSinh AS N'Họ Tên', LanThi AS N'Lần Thi', ThoiGian AS N'Thời Gian', KetQua AS N'Kết Quả'" +
-                            " from KetQua K inner join ThiSinh T on K.MaThiSinh = T.MaThiSinh";
+                            " from KetQua K inner join ThiSinh T on K.MaThiSinh = T.MaThiSinh order by T.MaThiSinh";
             dataHistory.DataSource = DatabaseManager.executeQuery(sql);
 
             dataHistory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13.75F, FontStyle.Bold);

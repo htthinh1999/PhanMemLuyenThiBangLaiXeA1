@@ -147,7 +147,7 @@
             this.btnPrevious.Location = new System.Drawing.Point(694, 461);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(35, 35);
-            this.btnPrevious.TabIndex = 4;
+            this.btnPrevious.TabIndex = 1;
             this.btnPrevious.Text = "<";
             this.btnPrevious.UseVisualStyleBackColor = true;
             this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
@@ -158,7 +158,7 @@
             this.btnNext.Location = new System.Drawing.Point(735, 461);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(35, 35);
-            this.btnNext.TabIndex = 4;
+            this.btnNext.TabIndex = 2;
             this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = true;
             this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
@@ -255,7 +255,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(317, 461);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(120, 35);
-            this.btnSubmit.TabIndex = 6;
+            this.btnSubmit.TabIndex = 0;
             this.btnSubmit.Text = "NỘP BÀI";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);

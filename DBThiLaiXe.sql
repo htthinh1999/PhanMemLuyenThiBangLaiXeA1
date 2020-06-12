@@ -176,7 +176,7 @@ insert into CauHoi values('053', N'Tại nơi đường bộ giao nhau cùng m�
 
 insert into CauHoi values('054', N'Người lái xe phải làm gì khi điều khiển xe vào đường cao tốc?',1,'')
 
-insert into CauHoi values('055', N'Người lái xe phải làm gì khi điều khiển x era khỏi làn đường cao tốc?',1,'')
+insert into CauHoi values('055', N'Người lái xe phải làm gì khi điều khiển xe ra khỏi làn đường cao tốc?',1,'')
 
 insert into CauHoi values('056', N'Những trường hợp nào ghi ở dưới đây không được đi vào đường cao tốc trừ người, phương tiện, thiết bị phục vụ cho việc quản lí, bảo trì đường cao tốc?',1,'')
 
@@ -1282,9 +1282,16 @@ insert into DapAn values('455',N'2.Xe con, xe của bạn, mô tô.','150',1)
 insert into DapAn values('456',N'3.Mô tô, xe con, xe của bạn.','150',0)
 
 insert into TaiKhoan values('admin', 'admin', 1)
-
 insert into TaiKhoan values('htthinh', '123', 0)
+insert into TaiKhoan values('ducbac', '123', 0)
 
 insert into ThiSinh values('TS001', N'Huỳnh Tấn Thịnh', '1999-09-27', 'M', N'Vạn Giã', 'htthinh')
+insert into ThiSinh values('TS002', N'Đinh Đức Bắc', '19980102', 'M', N'Quảng Trị', 'ducbac')
 
 insert into KetQua(MaThiSinh, ThoiGian, LanThi, KetQua) values((select MaThiSinh from ThiSinh where Username='htthinh'), CURRENT_TIMESTAMP, 1, '20/20')
+insert into KetQua(MaThiSinh, ThoiGian, LanThi, KetQua) values((select MaThiSinh from ThiSinh where Username='htthinh'), CURRENT_TIMESTAMP, 2, '17/20')
+insert into KetQua(MaThiSinh, ThoiGian, LanThi, KetQua) values((select MaThiSinh from ThiSinh where Username='ducbac'), CURRENT_TIMESTAMP, 1, '20/20')
+
+Select T.MaThiSinh AS N'Mã Thí Sinh', HoTenThiSinh AS N'Họ Tên', LanThi AS N'Lần Thi', ThoiGian AS N'Thời Gian', KetQua AS N'Kết Quả'
+from KetQua K inner join ThiSinh T on K.MaThiSinh = T.MaThiSinh
+order by T.MaThiSinh
