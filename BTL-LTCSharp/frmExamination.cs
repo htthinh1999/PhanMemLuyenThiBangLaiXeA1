@@ -32,9 +32,11 @@ namespace BTL_LTCSharp
         CheckBox[] cbxAnswer;
         Label[] lblAnswer;
 
+        int score = 0;
         int timeCountDown = 900;    // 15 minutes = 900 seconds
         int maxQuestionIndex = 20;
         int questionIndex = 1;
+        bool canShowResults = false;
 
         public frmExamination()
         {
@@ -133,6 +135,32 @@ namespace BTL_LTCSharp
                 lblAnswer[i].Location = new Point(location.X + 30, location.Y);
                 cbxAnswer[i].Location = new Point(location.X, lblAnswer[i].Location.Y - 8);
             }
+
+            ShowRightAndWrongAnswers(questionID);
+        }
+
+        void ShowRightAndWrongAnswers(int questionID)
+        {
+            if (canShowResults)
+            {
+                string ques = question[questionID];
+                for(int i=0; i<lblAnswer.Length; i++)
+                {
+                    cbxAnswer[i].Enabled = false;
+                    //lblAnswer[i].Enabled = false;
+                    lblAnswer[i].Font = new Font("Segoe UI", 12, FontStyle.Regular);
+                    lblAnswer[i].ForeColor = Color.Black;
+                    if (resultOfQuestion[questionID].Contains(lblAnswer[i].Text))
+                    {
+                        lblAnswer[i].Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                        lblAnswer[i].ForeColor = Color.Green;
+                    }else if (cbxAnswer[i].Checked)
+                    {
+                        lblAnswer[i].Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                        lblAnswer[i].ForeColor = Color.Red;
+                    }
+                }
+            }
         }
 
         void GetRandomQuestionAndAnswerAndResult()
@@ -221,7 +249,10 @@ namespace BTL_LTCSharp
             {
                 if ((Label)sender == lblAnswer[i])
                 {
-                    cbxAnswer[i].Checked = !cbxAnswer[i].Checked;
+                    if (cbxAnswer[i].Enabled)
+                    {
+                        cbxAnswer[i].Checked = !cbxAnswer[i].Checked;
+                    }
                     if (cbxAnswer[i].Checked)
                     {
                         if (!answerFromUser.ContainsKey(questionIndex))
@@ -260,13 +291,31 @@ namespace BTL_LTCSharp
 
         private void frmExamination_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (sender!=null && MessageBox.Show("Bạn chắc chắn muốn thoát cuộc thi chứ?", "Thoát cuộc thi?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+            canShowResults = !canShowResults;
+
+            if (canShowResults && answerFromUser.Count == 20)
             {
-                e.Cancel = true;
+                if (MessageBox.Show("Bạn có muốn xem đáp án của từng câu hỏi?", "Xem đáp án?", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    e.Cancel = true;
+                    ShowRightAndWrongAnswers(questionIndex);
+                }
+                else
+                {
+                    customerForm.Show();
+                }
             }
             else
             {
-                customerForm.Show();
+                if (sender != null && MessageBox.Show("Bạn chắc chắn muốn thoát cuộc thi chứ?", "Thoát cuộc thi?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                {
+                    e.Cancel = true;
+                    canShowResults = true;
+                }
+                else
+                {
+                    customerForm.Show();
+                }
             }
         }
 
@@ -303,7 +352,6 @@ namespace BTL_LTCSharp
 
         void Submit()
         {
-            int score = 0;
             for(int i=1; i <= 20; i++)
             {
                 if(answerFromUser.ContainsKey(i) && answerFromUser[i].Count == resultOfQuestion[i].Count)
@@ -341,8 +389,8 @@ namespace BTL_LTCSharp
             DatabaseManager.executeQuery(sql);
 
             timer.Stop();
-            this.Hide();
-            customerForm.Show();
+            this.Close();
         }
+
     }
 }
