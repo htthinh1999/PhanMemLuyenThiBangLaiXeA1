@@ -368,7 +368,7 @@ namespace BTL_LTCSharp
                             break;
                         }
                     }
-                    score++;
+                    if(fullAnsCorrect) { score++; }
                 }
             }
 

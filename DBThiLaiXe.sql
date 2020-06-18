@@ -32,7 +32,6 @@ create table DapAn
 	primary key(MaCauTraLoi,NDCauTraLoi),
 	foreign key (MaCauHoi) references CauHoi(MaCauHoi)
 )
- 
 
 create table TaiKhoan
 (
@@ -152,6 +151,8 @@ exec prc_SuaMatKhau 'bacbac','123456'
 exec prc_SuaThongTinThiSinh 'bacbac',N'nam nam','1998-01-02','M',N'Khánh Hòa'
 
 exec prc_DangKiTaiKhoan 'bacbac','123','tesst',N'Đinh Đức Bắc','1998-01-02','M',N'Quảng Trị'
+
+exec prc_SuaThongTinThiSinh 'htthinh', N'Huỳnh Tấn Thịnh', '19990927', 'M', N'Vạn Giã'
 
 /*endprocedure*/
 
