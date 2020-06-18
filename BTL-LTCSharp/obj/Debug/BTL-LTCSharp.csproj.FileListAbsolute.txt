@@ -1,9 +1,12 @@
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\bin\Debug\BTL-LTCSharp.exe.config
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\bin\Debug\BTL-LTCSharp.exe
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\bin\Debug\BTL-LTCSharp.pdb
-F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.csprojAssemblyReference.cache
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmAddQuestion.resources
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmAdmin.resources
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmAllInformation.resources
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmCustomer.resources
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmExamination.resources
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmHistory.resources
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmLogin.resources
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmSignUp.resources
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.Properties.Resources.resources
@@ -11,7 +14,8 @@ F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.csproj.Generate
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.csproj.CoreCompileInputs.cache
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.exe
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.pdb
-F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmAdmin.resources
-F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmHistory.resources
-F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmAddQuestion.resources
-F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmAllInformation.resources
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\bin\Debug\BTL-LTCSharp.exe.manifest
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\bin\Debug\BTL-LTCSharp.application
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.csprojAssemblyReference.cache
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.exe.manifest
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.application
