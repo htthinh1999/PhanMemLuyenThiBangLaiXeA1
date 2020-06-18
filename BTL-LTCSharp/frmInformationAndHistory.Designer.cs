@@ -1,6 +1,6 @@
 ﻿namespace BTL_LTCSharp
 {
-    partial class frmHistory
+    partial class frmInformationAndHistory
     {
         /// <summary>
         /// Required designer variable.

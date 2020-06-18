@@ -111,14 +111,16 @@ namespace BTL_LTCSharp
             ShowSearchInfo();
         }
 
-        private void btnResetInfo_Click(object sender, EventArgs e)
+        private void btnRefreshInfo_Click(object sender, EventArgs e)
         {
             ShowInformation();
+            txtSearchInfo.Clear();
         }
 
-        private void btnResetResult_Click(object sender, EventArgs e)
+        private void btnRefreshResult_Click(object sender, EventArgs e)
         {
             ShowHistory();
+            txtSearchResult.Clear();
         }
 
         private void btnSearchResult_Click(object sender, EventArgs e)

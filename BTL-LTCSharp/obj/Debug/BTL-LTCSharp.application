@@ -7,14 +7,14 @@
     <framework targetVersion="4.7.2" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="BTL-LTCSharp.exe.manifest" size="31001">
+    <dependentAssembly dependencyType="install" codebase="BTL-LTCSharp.exe.manifest" size="31000">
       <assemblyIdentity name="BTL-LTCSharp.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jm8Ykwb81ZtSUZdxqXR7yy+IAIRp2wNTbcgH6bw0w6k=</dsig:DigestValue>
+        <dsig:DigestValue>p1BhpfqdrtcBU2S6OvRMpaXlGuqO/H11gFd010Lk1Fs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

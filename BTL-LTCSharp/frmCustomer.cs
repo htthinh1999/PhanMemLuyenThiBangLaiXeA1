@@ -27,7 +27,7 @@ namespace BTL_LTCSharp
 
         private void picHistory_Click(object sender, EventArgs e)
         {
-            frmHistory historyForm = new frmHistory();
+            frmInformationAndHistory historyForm = new frmInformationAndHistory();
             historyForm.customerForm = this;
             historyForm.Show();
             this.Hide();

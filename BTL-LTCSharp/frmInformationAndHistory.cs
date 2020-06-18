@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace BTL_LTCSharp
 {
-    public partial class frmHistory : Form
+    public partial class frmInformationAndHistory : Form
     {
         public frmCustomer customerForm;
      
-        public frmHistory()
+        public frmInformationAndHistory()
         {
             InitializeComponent();
         }

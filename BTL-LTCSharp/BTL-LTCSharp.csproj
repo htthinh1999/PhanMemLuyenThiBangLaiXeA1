@@ -105,11 +105,11 @@
     <Compile Include="frmExamination.Designer.cs">
       <DependentUpon>frmExamination.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHistory.cs">
+    <Compile Include="frmInformationAndHistory.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmHistory.Designer.cs">
-      <DependentUpon>frmHistory.cs</DependentUpon>
+    <Compile Include="frmInformationAndHistory.Designer.cs">
+      <DependentUpon>frmInformationAndHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -140,8 +140,8 @@
     <EmbeddedResource Include="frmExamination.resx">
       <DependentUpon>frmExamination.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmHistory.resx">
-      <DependentUpon>frmHistory.cs</DependentUpon>
+    <EmbeddedResource Include="frmInformationAndHistory.resx">
+      <DependentUpon>frmInformationAndHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

@@ -388,7 +388,7 @@ namespace BTL_LTCSharp
 
             sql = "Insert into KetQua(MaThiSinh, ThoiGian, LanThi, KetQua) values(" +
                 "(select MaThiSinh from ThiSinh where Username = '" + DatabaseManager.username + "')" +
-                ", CURRENT_TIMESTAMP, " + lanThi + ", '" + score + "/20')";
+                ", CURRENT_TIMESTAMP, " + lanThi + ", '" + score.ToString().PadLeft(2, '0') + "/20')";
             DatabaseManager.executeQuery(sql);
 
             timer.Stop();
