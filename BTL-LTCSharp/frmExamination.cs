@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -109,7 +110,9 @@ namespace BTL_LTCSharp
             lblQuestion.Text =  question[questionID];
             if (!imageOfQuestion[questionID].Equals(""))
             {
-                picImage.Image = new Bitmap((Bitmap)Properties.Resources.ResourceManager.GetObject(imageOfQuestion[questionID]));
+                string directoryName = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory + "images\\");
+                picImage.Image = new Bitmap(Path.Combine(directoryName, imageOfQuestion[questionID] + ".jpg"));
+                //picImage.Image = new Bitmap((Bitmap)Properties.Resources.ResourceManager.GetObject(imageOfQuestion[questionID]));
                 picImage.Location = new Point(picImage.Location.X, lblQuestion.Location.Y + lblQuestion.Height + 10);
                 picImage.Show();
             }

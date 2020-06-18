@@ -12,6 +12,22 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>F:\LAP_TRINH\publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,18 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>05BAB5BC715198111E1167C94DEFA6FAE92CF9BA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>BTL-LTCSharp_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -126,6 +154,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="BTL-LTCSharp_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -154,214 +183,89 @@
     <None Include="Resources\question-answer.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\81.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\82.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\83.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\84.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\85.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\86.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\87.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\88.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\89.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\90.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\91.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\92.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\93.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\94.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\95.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\96.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\97.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\98.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\99.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\100.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\101.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\102.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\103.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\104.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\105.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\106.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\107.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\108.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\109.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\110.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\111.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\112.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\113.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\114.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\115.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\116.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\117.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\118.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\119.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\120.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\121.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\122.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\123.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\124.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\125.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\126.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\127.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\128.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\129.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\130.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\131.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\132.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\133.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\134.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\135.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\136.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\137.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\138.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\139.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\140.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\141.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\142.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\143.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\144.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\145.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\146.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\147.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\148.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\149.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\150.jpg" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\100.jpg" />
+    <Content Include="images\101.jpg" />
+    <Content Include="images\102.jpg" />
+    <Content Include="images\103.jpg" />
+    <Content Include="images\104.jpg" />
+    <Content Include="images\105.jpg" />
+    <Content Include="images\106.jpg" />
+    <Content Include="images\107.jpg" />
+    <Content Include="images\108.jpg" />
+    <Content Include="images\109.jpg" />
+    <Content Include="images\110.jpg" />
+    <Content Include="images\111.jpg" />
+    <Content Include="images\112.jpg" />
+    <Content Include="images\113.jpg" />
+    <Content Include="images\114.jpg" />
+    <Content Include="images\115.jpg" />
+    <Content Include="images\116.jpg" />
+    <Content Include="images\117.jpg" />
+    <Content Include="images\118.jpg" />
+    <Content Include="images\119.jpg" />
+    <Content Include="images\120.jpg" />
+    <Content Include="images\121.jpg" />
+    <Content Include="images\122.jpg" />
+    <Content Include="images\123.jpg" />
+    <Content Include="images\124.jpg" />
+    <Content Include="images\125.jpg" />
+    <Content Include="images\126.jpg" />
+    <Content Include="images\127.jpg" />
+    <Content Include="images\128.jpg" />
+    <Content Include="images\129.jpg" />
+    <Content Include="images\130.jpg" />
+    <Content Include="images\131.jpg" />
+    <Content Include="images\132.jpg" />
+    <Content Include="images\133.jpg" />
+    <Content Include="images\134.jpg" />
+    <Content Include="images\135.jpg" />
+    <Content Include="images\136.jpg" />
+    <Content Include="images\137.jpg" />
+    <Content Include="images\138.jpg" />
+    <Content Include="images\139.jpg" />
+    <Content Include="images\140.jpg" />
+    <Content Include="images\141.jpg" />
+    <Content Include="images\142.jpg" />
+    <Content Include="images\143.jpg" />
+    <Content Include="images\144.jpg" />
+    <Content Include="images\145.jpg" />
+    <Content Include="images\146.jpg" />
+    <Content Include="images\147.jpg" />
+    <Content Include="images\148.jpg" />
+    <Content Include="images\149.jpg" />
+    <Content Include="images\150.jpg" />
+    <Content Include="images\81.jpg" />
+    <Content Include="images\82.jpg" />
+    <Content Include="images\83.jpg" />
+    <Content Include="images\84.jpg" />
+    <Content Include="images\85.jpg" />
+    <Content Include="images\86.jpg" />
+    <Content Include="images\87.jpg" />
+    <Content Include="images\88.jpg" />
+    <Content Include="images\89.jpg" />
+    <Content Include="images\90.jpg" />
+    <Content Include="images\91.jpg" />
+    <Content Include="images\92.jpg" />
+    <Content Include="images\93.jpg" />
+    <Content Include="images\94.jpg" />
+    <Content Include="images\95.jpg" />
+    <Content Include="images\96.jpg" />
+    <Content Include="images\97.jpg" />
+    <Content Include="images\98.jpg" />
+    <Content Include="images\99.jpg" />
+    <None Include="Resources\open-picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

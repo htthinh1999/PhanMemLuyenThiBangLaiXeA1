@@ -241,7 +241,6 @@
             // 
             // picImage
             // 
-            this.picImage.Image = global::BTL_LTCSharp.Properties.Resources._150;
             this.picImage.Location = new System.Drawing.Point(187, 98);
             this.picImage.Name = "picImage";
             this.picImage.Size = new System.Drawing.Size(400, 200);

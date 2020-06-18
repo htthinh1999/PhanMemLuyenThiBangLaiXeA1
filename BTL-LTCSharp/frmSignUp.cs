@@ -39,8 +39,8 @@ namespace BTL_LTCSharp
                 string sql = "Insert into TaiKhoan values('" + txtUsername.Text + "', '" + txtPassword.Text + "', 0)";
                 DatabaseManager.executeQuery(sql);
                 sql = "Select COUNT(*) from ThiSinh";
-                int IDindex = Convert.ToInt32(DatabaseManager.executeQuery(sql).Rows[0][0]) + 1;    // Get numbers of ThiSinh
-                string maThiSinh = "TS" + Convert.ToString(IDindex).PadLeft(3, '0');
+                int thiSinhIndex = Convert.ToInt32(DatabaseManager.executeQuery(sql).Rows[0][0]) + 1;    // Get numbers of ThiSinh
+                string maThiSinh = "TS" + Convert.ToString(thiSinhIndex).PadLeft(3, '0');
                 sql = "Insert into ThiSinh values('" + maThiSinh + "', N'" + txtFullName.Text + "', '" + Convert.ToInt32(cbxYear.Text) + Convert.ToInt32(cbxMonth.Text).ToString().PadLeft(2, '0') + Convert.ToInt32(cbxDay.Text).ToString().PadLeft(2, '0') + "', '"
                                                         + (cbxSex.Text.Equals("Nam") ? "M" : "F") + "', N'" + txtAddress.Text + "', '" + txtUsername.Text + "')";
                 DatabaseManager.executeQuery(sql);
