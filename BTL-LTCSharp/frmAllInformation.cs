@@ -43,7 +43,30 @@ namespace BTL_LTCSharp
                 column.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
-
+        void ShowSearchInfo()
+        {
+            if(txtSearchInfo.Text.Equals(""))
+            {
+                MessageBox.Show("Bạn cần nhập thông tin tìm kiếm", "Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Warning,MessageBoxDefaultButton.Button1);
+            }
+            else
+            {
+                String sql = "exec prc_TimKiemThongTinThiSinh N'"+txtSearchInfo.Text+"'";
+                dataInformation.DataSource = DatabaseManager.executeQuery(sql);
+                if (DatabaseManager.executeQuery(sql).Rows.Count == 0)
+                    MessageBox.Show("Không tìm thấy thông tin cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                else
+                {
+                    dataInformation.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13.75F, FontStyle.Bold);
+                    foreach (DataGridViewColumn column in dataInformation.Columns)
+                    {
+                        column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        column.DefaultCellStyle.Font = new Font("Segoe UI", 12.75F);
+                        column.DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                }    
+            }    
+        }
         void ShowHistory()
         {
             string sql = "Select T.MaThiSinh AS N'Mã Thí Sinh', HoTenThiSinh AS N'Họ Tên', LanThi AS N'Lần Thi', ThoiGian AS N'Thời Gian', KetQua AS N'Kết Quả'" +
@@ -57,6 +80,50 @@ namespace BTL_LTCSharp
                 column.DefaultCellStyle.Font = new Font("Segoe UI", 12.75F);
                 column.DefaultCellStyle.ForeColor = Color.Black;
             }
+        }
+        void ShowSearchResult()
+        {
+            if (txtSearchResult.Text.Equals(""))
+            {
+                MessageBox.Show("Bạn cần nhập thông tin tìm kiếm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+            }
+            else
+            {
+                String sql = "exec prc_TimKiemKetQua N'" + txtSearchResult.Text + "'";
+                dataHistory.DataSource = DatabaseManager.executeQuery(sql);
+                if (DatabaseManager.executeQuery(sql).Rows.Count == 0)
+                    MessageBox.Show("Không tìm thấy thông tin cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
+                else
+                {
+                    dataHistory.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 13.75F, FontStyle.Bold);
+                    foreach (DataGridViewColumn column in dataHistory.Columns)
+                    {
+                        column.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                        column.DefaultCellStyle.Font = new Font("Segoe UI", 12.75F);
+                        column.DefaultCellStyle.ForeColor = Color.Black;
+                    }
+                }
+            }
+        }
+
+        private void btnSearchInfo_Click(object sender, EventArgs e)
+        {
+            ShowSearchInfo();
+        }
+
+        private void btnResetInfo_Click(object sender, EventArgs e)
+        {
+            ShowInformation();
+        }
+
+        private void btnResetResult_Click(object sender, EventArgs e)
+        {
+            ShowHistory();
+        }
+
+        private void btnSearchResult_Click(object sender, EventArgs e)
+        {
+            ShowSearchResult();
         }
     }
 }

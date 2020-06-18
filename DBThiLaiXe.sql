@@ -109,20 +109,27 @@ begin
 end
 
 create procedure prc_TimKiemKetQua 
-	@ketqua nvarchar(10)
+	@ketqua nvarchar(50)
 as
 begin
 	if(@ketqua = N'Đậu')
 		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
-		where CONVERT(int,SUBSTRING(KetQua,0,3)) >=16
+		where CONVERT(int,SUBSTRING(KetQua,1,2)) >=16
 	if(@ketqua = N'Trượt')
 		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
-		where CONVERT(int,SUBSTRING(KetQua,0,3)) < 16
+		where CONVERT(int,SUBSTRING(KetQua,1,2)) < 16
+	else
+		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
+		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
+		where ThiSinh.HoTenThiSinh like '%'+@ketqua+'%' or KetQua.MaThiSinh like '%'+@ketqua+'%' or KetQua.LanThi like '%'+@ketqua+'%' or KetQua.ThoiGian like '%'+@ketqua+'%' or SUBSTRING(KetQua.KetQua,1,2) like '%'+@ketqua
 end
+
+drop proc prc_TimKiemKetQua
 
 create procedure prc_ThemCauHoi
 	@macauhoi varchar(3),
