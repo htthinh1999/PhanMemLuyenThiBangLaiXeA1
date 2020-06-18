@@ -117,13 +117,14 @@ begin
 		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
-		where CONVERT(int,SUBSTRING(KetQua,0,3)) >=16
+		where CONVERT(int,SUBSTRING(KetQua,1,2)) >=16
 	if(@ketqua = N'Trượt')
 		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
 		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
 		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
-		where CONVERT(int,SUBSTRING(KetQua,0,3)) < 16
+		where CONVERT(int,SUBSTRING(KetQua,1,2)) < 16
 end
+
 
 create procedure prc_ThemCauHoi
 	@macauhoi varchar(3),
