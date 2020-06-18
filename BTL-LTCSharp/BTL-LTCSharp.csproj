@@ -265,6 +265,8 @@
     <Content Include="images\97.jpg" />
     <Content Include="images\98.jpg" />
     <Content Include="images\99.jpg" />
+    <None Include="Resources\icon-refresh1.png" />
+    <None Include="Resources\icon-refresh.png" />
     <None Include="Resources\open-picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
