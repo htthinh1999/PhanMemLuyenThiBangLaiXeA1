@@ -61,6 +61,99 @@ create table KetQua
 	KetQua varchar(5) not null,
 	foreign key (MaThiSinh) references ThiSinh(MaThiSinh)
 )
+/*procedure*/
+create procedure prc_DangKiTaiKhoan
+	@username varchar(20),
+	@password varchar(20),
+	@mathisinh varchar(10),
+	@hotenthisinh nvarchar(50),
+	@ngaysinh date,
+	@gioitinh char(1),
+	@diachi nvarchar(50)
+as
+begin
+	insert into TaiKhoan values(@username,@password,0)
+	insert into ThiSinh values(@mathisinh,@hotenthisinh,@ngaysinh,@gioitinh,@diachi,@username)
+end
+
+create procedure prc_SuaThongTinThiSinh
+	@username varchar(20),
+	@hotenthisinh nvarchar(50),
+	@ngaysinh date,
+	@gioitinh char(1),
+	@diachi nvarchar(50)
+as
+begin
+	update ThiSinh 
+	set HoTenThiSinh = @hotenthisinh, NgaySinh = @ngaysinh, GioiTinh = @gioitinh, DiaChi = @diachi
+	where Username = @username
+end
+
+create procedure prc_SuaMatKhau
+	@username varchar(20),
+	@password varchar(20)
+as
+begin
+	update TaiKhoan
+	set Password = @password
+	where Username = @username
+end
+
+create procedure prc_TimKiemThongTinThiSinh
+	@chuoitimkiem nvarchar(50)
+as
+begin
+	select *
+	from ThiSinh
+	where MaThiSinh like '%'+@chuoitimkiem+'%' or HoTenThiSinh like '%'+@chuoitimkiem+'%' or NgaySinh like '%'+@chuoitimkiem+'%'
+	or GioiTinh like '%'+@chuoitimkiem+'%' or DiaChi like '%'+@chuoitimkiem+'%' or Username like '%'+@chuoitimkiem+'%'
+end
+
+create procedure prc_TimKiemKetQua 
+	@ketqua nvarchar(10)
+as
+begin
+	if(@ketqua = N'Đậu')
+		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
+		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
+		where CONVERT(int,SUBSTRING(KetQua,0,3)) >=16
+	if(@ketqua = N'Trượt')
+		select KetQua.MaThiSinh as N'Mã Thí Sinh',ThiSinh.HoTenThiSinh as N'Họ Tên',
+		KetQua.LanThi as N'Lần Thi',KetQua.ThoiGian as N'Thời Gian ',KetQua.KetQua as N'Kết Quả'
+		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
+		where CONVERT(int,SUBSTRING(KetQua,0,3)) < 16
+end
+
+create procedure prc_ThemCauHoi
+	@macauhoi varchar(3),
+	@ndcauhoi nvarchar(500),
+	@maphan smallint,
+	@hinh varchar(20)
+as
+begin
+	insert into CauHoi values(@macauhoi,@ndcauhoi,@maphan,@hinh)
+end
+
+create procedure prc_ThemDapAn
+	@macautraloi int,
+	@ndcautraloi nvarchar(300),
+	@macauhoi varchar(3),
+	@dungsai bit
+as
+begin
+	insert into DapAn values(@macautraloi,@ndcautraloi,@macauhoi,@dungsai)
+end
+
+exec prc_TimKiemKetQua N'Đậu'
+
+exec prc_SuaMatKhau 'bacbac','123456'
+
+exec prc_SuaThongTinThiSinh 'bacbac',N'nam nam','1998-01-02','M',N'Khánh Hòa'
+
+exec prc_DangKiTaiKhoan 'bacbac','123','tesst',N'Đinh Đức Bắc','1998-01-02','M',N'Quảng Trị'
+
+/*endprocedure*/
 
 insert into Phan values(1,N'Giao thông đường bộ')
 
