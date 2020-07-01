@@ -32,7 +32,6 @@
             this.cbxYear = new System.Windows.Forms.ComboBox();
             this.cbxMonth = new System.Windows.Forms.ComboBox();
             this.cbxDay = new System.Windows.Forms.ComboBox();
-            this.cbxSex = new System.Windows.Forms.ComboBox();
             this.btnUpdateInformation = new System.Windows.Forms.Button();
             this.lblAddress = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -54,6 +53,8 @@
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.lblOldPassword = new System.Windows.Forms.Label();
             this.txtOldPassword = new System.Windows.Forms.TextBox();
+            this.rdoMale = new System.Windows.Forms.RadioButton();
+            this.rdoFemale = new System.Windows.Forms.RadioButton();
             this.gbxInformation.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataHistory)).BeginInit();
@@ -62,10 +63,11 @@
             // 
             // gbxInformation
             // 
+            this.gbxInformation.Controls.Add(this.rdoFemale);
+            this.gbxInformation.Controls.Add(this.rdoMale);
             this.gbxInformation.Controls.Add(this.cbxYear);
             this.gbxInformation.Controls.Add(this.cbxMonth);
             this.gbxInformation.Controls.Add(this.cbxDay);
-            this.gbxInformation.Controls.Add(this.cbxSex);
             this.gbxInformation.Controls.Add(this.btnUpdateInformation);
             this.gbxInformation.Controls.Add(this.lblAddress);
             this.gbxInformation.Controls.Add(this.txtAddress);
@@ -177,20 +179,6 @@
             this.cbxDay.Size = new System.Drawing.Size(40, 23);
             this.cbxDay.TabIndex = 10;
             this.cbxDay.Text = "01";
-            // 
-            // cbxSex
-            // 
-            this.cbxSex.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbxSex.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.cbxSex.FormattingEnabled = true;
-            this.cbxSex.Items.AddRange(new object[] {
-            "Nam",
-            "Nữ"});
-            this.cbxSex.Location = new System.Drawing.Point(373, 49);
-            this.cbxSex.Name = "cbxSex";
-            this.cbxSex.Size = new System.Drawing.Size(55, 23);
-            this.cbxSex.TabIndex = 7;
-            this.cbxSex.Text = "Nam";
             // 
             // btnUpdateInformation
             // 
@@ -443,7 +431,31 @@
             this.txtOldPassword.TabIndex = 3;
             this.txtOldPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // frmHistory
+            // rdoMale
+            // 
+            this.rdoMale.AutoSize = true;
+            this.rdoMale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoMale.Location = new System.Drawing.Point(373, 50);
+            this.rdoMale.Name = "rdoMale";
+            this.rdoMale.Size = new System.Drawing.Size(51, 19);
+            this.rdoMale.TabIndex = 13;
+            this.rdoMale.TabStop = true;
+            this.rdoMale.Text = "Nam";
+            this.rdoMale.UseVisualStyleBackColor = true;
+            // 
+            // rdoFemale
+            // 
+            this.rdoFemale.AutoSize = true;
+            this.rdoFemale.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoFemale.Location = new System.Drawing.Point(430, 50);
+            this.rdoFemale.Name = "rdoFemale";
+            this.rdoFemale.Size = new System.Drawing.Size(41, 19);
+            this.rdoFemale.TabIndex = 14;
+            this.rdoFemale.TabStop = true;
+            this.rdoFemale.Text = "Nữ";
+            this.rdoFemale.UseVisualStyleBackColor = true;
+            // 
+            // frmInformationAndHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -453,7 +465,7 @@
             this.Controls.Add(this.gbxInformation);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "frmHistory";
+            this.Name = "frmInformationAndHistory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "THÔNG TIN TÀI KHOẢN VÀ LỊCH SỬ CÁC LẦN THI";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmHistory_FormClosing);
@@ -484,7 +496,6 @@
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Button btnUpdateInformation;
-        private System.Windows.Forms.ComboBox cbxSex;
         private System.Windows.Forms.ComboBox cbxYear;
         private System.Windows.Forms.ComboBox cbxMonth;
         private System.Windows.Forms.ComboBox cbxDay;
@@ -496,5 +507,7 @@
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.Label lblOldPassword;
         private System.Windows.Forms.TextBox txtOldPassword;
+        private System.Windows.Forms.RadioButton rdoFemale;
+        private System.Windows.Forms.RadioButton rdoMale;
     }
 }

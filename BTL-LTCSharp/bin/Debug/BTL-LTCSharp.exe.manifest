@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BTL-LTCSharp.exe" size="245744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BTL-LTCSharp.exe" size="247280">
       <assemblyIdentity name="BTL-LTCSharp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>cBeSc4/D3/8xwldSFPJ8kw8wmtpTxyXDgkgeKPRRFBw=</dsig:DigestValue>
+        <dsig:DigestValue>h8OMwE9VobM4mVz9IYNRXWoq8jFMnfgEZM0ul+zepcA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -39,3 +39,4 @@ F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.application
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.exe
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.pdb
 F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL_LTCSharp.frmInformationAndHistory.resources
+F:\LAP_TRINH\C#\BTL-LTCSharp\BTL-LTCSharp\obj\Debug\BTL-LTCSharp.csprojAssemblyReference.cache

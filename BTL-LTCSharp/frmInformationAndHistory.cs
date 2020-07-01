@@ -27,7 +27,11 @@ namespace BTL_LTCSharp
 
         void ShowInformation()
         {
-            foreach(ComboBox cbxInfor in gbxInformation.Controls.OfType<ComboBox>())
+            foreach (RadioButton rdoSex in gbxInformation.Controls.OfType<RadioButton>())
+            {
+                rdoSex.Hide();
+            }
+            foreach (ComboBox cbxInfor in gbxInformation.Controls.OfType<ComboBox>())
             {
                 cbxInfor.Hide();
             }
@@ -59,6 +63,84 @@ namespace BTL_LTCSharp
             }
         }
 
+        bool CheckDateValid()
+        {
+            int day, month, year;
+            bool isDay, isMonth, isYear;
+            isDay = int.TryParse(cbxDay.Text, out day);
+            isMonth = int.TryParse(cbxMonth.Text, out month);
+            isYear = int.TryParse(cbxYear.Text, out year);
+
+            if (!isDay || day <= 0 || day > 32)
+            {
+                MessageBox.Show("Bạn đã nhập sai ngày sinh!\nMời bạn nhập lại!!", "Lỗi nhập ngày sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!isMonth || month <= 0 || month > 12)
+            {
+                MessageBox.Show("Bạn đã nhập sai tháng sinh!\nMời bạn nhập lại!!", "Lỗi nhập tháng sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            else if (!isYear || year <= 0)
+            {
+                MessageBox.Show("Bạn đã nhập sai năm sinh!\nMời bạn nhập lại!!", "Lỗi nhập năm sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+
+            switch (month)
+            {
+                case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                    if (day > 31)
+                    {
+                        MessageBox.Show("Bạn đã nhập sai ngày sinh!\nMời bạn nhập lại!!", "Lỗi nhập ngày sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                    break;
+                case 4: case 6: case 9: case 11:
+                    if (day > 30)
+                    {
+                        MessageBox.Show("Bạn đã nhập sai ngày sinh!\nMời bạn nhập lại!!", "Lỗi nhập ngày sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return false;
+                    }
+                    break;
+                case 2:
+                    if (isLeapYear(year))
+                    {
+                        if (day > 29)
+                        {
+                            MessageBox.Show("Bạn đã nhập sai ngày sinh!\nMời bạn nhập lại!!", "Lỗi nhập ngày sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        if (day > 28)
+                        {
+                            MessageBox.Show("Bạn đã nhập sai ngày sinh!\nMời bạn nhập lại!!", "Lỗi nhập ngày sinh!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return false;
+                        }
+                    }
+                    break;
+            }
+
+            return true;
+        }
+
+        bool isLeapYear(int year)
+        {
+            if (year % 4 == 0)
+            {
+                return true;
+            }
+
+            if (year % 4 == 0 && year % 100 != 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void frmHistory_FormClosing(object sender, FormClosingEventArgs e)
         {
             customerForm.Show();
@@ -80,6 +162,10 @@ namespace BTL_LTCSharp
                         textbox.ReadOnly = false;
                     }
                 }
+                foreach (RadioButton rdoSex in gbxInformation.Controls.OfType<RadioButton>())
+                {
+                    rdoSex.Show();
+                }
                 foreach (ComboBox cbxInfor in gbxInformation.Controls.OfType<ComboBox>())
                 {
                     cbxInfor.Show();
@@ -91,8 +177,16 @@ namespace BTL_LTCSharp
                 DataTable data = DatabaseManager.executeQuery(sql);
                 string dateBorn = data.Rows[0]["NgaySinh"].ToString();
                 string sex = data.Rows[0]["GioiTinh"].ToString();
-                Console.WriteLine(sex);
-                cbxSex.Text = (sex.Equals("M")) ? "Nam" : "Nữ";
+
+                //cbxSex.Text = (sex.Equals("M")) ? "Nam" : "Nữ";
+                if(sex.Equals("M"))
+                {
+                    rdoMale.Checked = true;
+                }
+                else
+                {
+                    rdoFemale.Checked = true;
+                }
                 cbxDay.Text = dateBorn.Substring(0, 2);
                 cbxMonth.Text = dateBorn.Substring(3, 2);
                 cbxYear.Text = dateBorn.Substring(6, 4);
@@ -112,17 +206,25 @@ namespace BTL_LTCSharp
                             textbox.ReadOnly = true;
                         }
                     }
+                    foreach(RadioButton rdoSex in gbxInformation.Controls.OfType<RadioButton>())
+                    {
+                        rdoSex.Hide();
+                    }
                     foreach (ComboBox cbxInfor in gbxInformation.Controls.OfType<ComboBox>())
                     {
                         cbxInfor.Hide();
                     }
 
-                    string sql = "prc_SuaThongTinThiSinh '" + DatabaseManager.username + "', N'" + txtName.Text + "'," +
-                        " '" + cbxYear.Text + cbxMonth.Text + cbxDay.Text + "', '" + (cbxSex.Text.Equals("Nam") ? "M" : "F") + "', N'" + txtAddress.Text + "'";
-                    Console.WriteLine(sql);
-                    DatabaseManager.executeQuery(sql);
-                    ShowInformation();
-                    MessageBox.Show("Chỉnh sửa thông tin thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    if (CheckDateValid())
+                    {
+                        string sql = "prc_SuaThongTinThiSinh '" + DatabaseManager.username + "', N'" + txtName.Text + "'," +
+                            " '" + cbxYear.Text + cbxMonth.Text + cbxDay.Text + "', '" + (rdoMale.Checked ? "M" : "F") + "', N'" + txtAddress.Text + "'";
+                        Console.WriteLine(sql);
+                        DatabaseManager.executeQuery(sql);
+                        ShowInformation();
+                        MessageBox.Show("Chỉnh sửa thông tin thành công!", "Thành công!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
             }
         }

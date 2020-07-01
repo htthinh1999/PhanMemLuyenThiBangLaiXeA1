@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAllInformation));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.txtSearchResult = new System.Windows.Forms.TextBox();
             this.btnRefreshResult = new System.Windows.Forms.Button();
             this.btnSearchResult = new System.Windows.Forms.Button();
             this.dataHistory = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSex = new System.Windows.Forms.Label();
             this.btnRefreshInfo = new System.Windows.Forms.Button();
             this.btnSearchInfo = new System.Windows.Forms.Button();
             this.txtSearchInfo = new System.Windows.Forms.TextBox();
             this.dataInformation = new System.Windows.Forms.DataGridView();
-            this.lblSex = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataHistory)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -62,6 +62,17 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CÁC KẾT QUẢ THI";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.label1.Location = new System.Drawing.Point(195, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(178, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Tìm kiếm thông tin kết quả";
             // 
             // txtSearchResult
             // 
@@ -121,6 +132,17 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "THÔNG TIN NGƯỜI DÙNG";
             // 
+            // lblSex
+            // 
+            this.lblSex.AutoSize = true;
+            this.lblSex.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSex.ForeColor = System.Drawing.Color.MediumAquamarine;
+            this.lblSex.Location = new System.Drawing.Point(168, 42);
+            this.lblSex.Name = "lblSex";
+            this.lblSex.Size = new System.Drawing.Size(205, 17);
+            this.lblSex.TabIndex = 6;
+            this.lblSex.Text = "Tìm kiếm thông tin người dùng";
+            // 
             // btnRefreshInfo
             // 
             this.btnRefreshInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -163,28 +185,6 @@
             this.dataInformation.Size = new System.Drawing.Size(761, 186);
             this.dataInformation.TabIndex = 0;
             // 
-            // lblSex
-            // 
-            this.lblSex.AutoSize = true;
-            this.lblSex.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSex.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.lblSex.Location = new System.Drawing.Point(168, 42);
-            this.lblSex.Name = "lblSex";
-            this.lblSex.Size = new System.Drawing.Size(205, 17);
-            this.lblSex.TabIndex = 6;
-            this.lblSex.Text = "Tìm kiếm thông tin người dùng";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.MediumAquamarine;
-            this.label1.Location = new System.Drawing.Point(195, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(178, 17);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "Tìm kiếm thông tin kết quả";
-            // 
             // frmAllInformation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -192,6 +192,8 @@
             this.ClientSize = new System.Drawing.Size(800, 542);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmAllInformation";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CÁC THÔNG TIN NGƯỜI DÙNG";
