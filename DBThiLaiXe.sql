@@ -61,6 +61,7 @@ create table KetQua
 	foreign key (MaThiSinh) references ThiSinh(MaThiSinh)
 )
 /*procedure*/
+go
 create procedure prc_DangKiTaiKhoan
 	@username varchar(20),
 	@password varchar(20),
@@ -74,6 +75,7 @@ begin
 	insert into TaiKhoan values(@username,@password,0)
 	insert into ThiSinh values(@mathisinh,@hotenthisinh,@ngaysinh,@gioitinh,@diachi,@username)
 end
+go
 
 create procedure prc_SuaThongTinThiSinh
 	@username varchar(20),
@@ -87,6 +89,7 @@ begin
 	set HoTenThiSinh = @hotenthisinh, NgaySinh = @ngaysinh, GioiTinh = @gioitinh, DiaChi = @diachi
 	where Username = @username
 end
+go
 
 create procedure prc_SuaMatKhau
 	@username varchar(20),
@@ -97,6 +100,7 @@ begin
 	set Password = @password
 	where Username = @username
 end
+go
 
 create procedure prc_TimKiemThongTinThiSinh
 	@chuoitimkiem nvarchar(50)
@@ -107,6 +111,7 @@ begin
 	where MaThiSinh like '%'+@chuoitimkiem+'%' or HoTenThiSinh like '%'+@chuoitimkiem+'%' or NgaySinh like '%'+@chuoitimkiem+'%'
 	or GioiTinh like '%'+@chuoitimkiem+'%' or DiaChi like '%'+@chuoitimkiem+'%' or Username like '%'+@chuoitimkiem+'%'
 end
+go
 
 create procedure prc_TimKiemKetQua 
 	@ketqua nvarchar(50)
@@ -128,6 +133,7 @@ begin
 		from KetQua inner join ThiSinh on KetQua.MaThiSinh = ThiSinh.MaThiSinh
 		where ThiSinh.HoTenThiSinh like '%'+@ketqua+'%' or KetQua.MaThiSinh like '%'+@ketqua+'%' or KetQua.LanThi like '%'+@ketqua+'%' or KetQua.ThoiGian like '%'+@ketqua+'%' or KetQua.KetQua like '%'+@ketqua
 end
+go
 
 create procedure prc_ThemCauHoi
 	@macauhoi varchar(3),
@@ -138,6 +144,7 @@ as
 begin
 	insert into CauHoi values(@macauhoi,@ndcauhoi,@maphan,@hinh)
 end
+go
 
 create procedure prc_ThemDapAn
 	@macautraloi int,
@@ -148,6 +155,7 @@ as
 begin
 	insert into DapAn values(@macautraloi,@ndcautraloi,@macauhoi,@dungsai)
 end
+go
 
 exec prc_TimKiemKetQua N'Đậu'
 

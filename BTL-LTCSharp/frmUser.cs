@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BTL_LTCSharp
 {
-    public partial class frmCustomer : Form
+    public partial class frmUser : Form
     {
-        public frmCustomer()
+        public frmUser()
         {
             InitializeComponent();
         }
@@ -20,16 +20,16 @@ namespace BTL_LTCSharp
         private void picExamination_Click(object sender, EventArgs e)
         {
             frmExamination examinationForm = new frmExamination();
-            examinationForm.customerForm = this;
+            examinationForm.userForm = this;
             examinationForm.Show();
             this.Hide();
         }
 
         private void picHistory_Click(object sender, EventArgs e)
         {
-            frmInformationAndHistory historyForm = new frmInformationAndHistory();
-            historyForm.customerForm = this;
-            historyForm.Show();
+            frmInformationAndHistory informationAndHistoryForm = new frmInformationAndHistory();
+            informationAndHistoryForm.userForm = this;
+            informationAndHistoryForm.Show();
             this.Hide();
         }
 

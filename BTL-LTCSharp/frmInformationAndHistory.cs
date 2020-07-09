@@ -12,7 +12,7 @@ namespace BTL_LTCSharp
 {
     public partial class frmInformationAndHistory : Form
     {
-        public frmCustomer customerForm;
+        public frmUser userForm;
      
         public frmInformationAndHistory()
         {
@@ -128,7 +128,7 @@ namespace BTL_LTCSharp
 
         bool isLeapYear(int year)
         {
-            if (year % 4 == 0)
+            if (year % 400 == 0)
             {
                 return true;
             }
@@ -141,17 +141,11 @@ namespace BTL_LTCSharp
             return false;
         }
 
-        private void frmHistory_FormClosing(object sender, FormClosingEventArgs e)
+        void UpdateInformation()
         {
-            customerForm.Show();
-        }
-
-        private void btnUpdateInformation_Click(object sender, EventArgs e)
-        {
-            Button btn = (Button)sender;
-            if (btn.Text.Equals("SỬA THÔNG TIN"))
+            if (btnUpdateInformation.Text.Equals("SỬA THÔNG TIN"))
             {
-                btn.Text = "CẬP NHẬT THÔNG TIN";
+                btnUpdateInformation.Text = "CẬP NHẬT THÔNG TIN";
 
                 txtSex.Hide();
                 txtBornDate.Hide();
@@ -179,7 +173,7 @@ namespace BTL_LTCSharp
                 string sex = data.Rows[0]["GioiTinh"].ToString();
 
                 //cbxSex.Text = (sex.Equals("M")) ? "Nam" : "Nữ";
-                if(sex.Equals("M"))
+                if (sex.Equals("M"))
                 {
                     rdoMale.Checked = true;
                 }
@@ -193,9 +187,9 @@ namespace BTL_LTCSharp
             }
             else
             {
-                if(MessageBox.Show("Bạn có chắc chắn muốn thay đổi thông tin?", "Xác nhận thay đổi thông tin", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                if (MessageBox.Show("Bạn có chắc chắn muốn thay đổi thông tin?", "Xác nhận thay đổi thông tin", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    btn.Text = "SỬA THÔNG TIN";
+                    btnUpdateInformation.Text = "SỬA THÔNG TIN";
 
                     txtSex.Show();
                     txtBornDate.Show();
@@ -206,7 +200,7 @@ namespace BTL_LTCSharp
                             textbox.ReadOnly = true;
                         }
                     }
-                    foreach(RadioButton rdoSex in gbxInformation.Controls.OfType<RadioButton>())
+                    foreach (RadioButton rdoSex in gbxInformation.Controls.OfType<RadioButton>())
                     {
                         rdoSex.Hide();
                     }
@@ -229,7 +223,7 @@ namespace BTL_LTCSharp
             }
         }
 
-        private void btnChangePassword_Click(object sender, EventArgs e)
+        void ChangePassword()
         {
             if (!txtOldPassword.Text.Equals(""))
             {
@@ -292,6 +286,21 @@ namespace BTL_LTCSharp
                 MessageBox.Show("Bạn chưa nhập mật khẩu hiện tại!", "Lỗi chưa nhập!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtOldPassword.Focus();
             }
+        }
+
+        private void frmHistory_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            userForm.Show();
+        }
+
+        private void btnUpdateInformation_Click(object sender, EventArgs e)
+        {
+            UpdateInformation();
+        }
+
+        private void btnChangePassword_Click(object sender, EventArgs e)
+        {
+            ChangePassword();
         }
     }
 }

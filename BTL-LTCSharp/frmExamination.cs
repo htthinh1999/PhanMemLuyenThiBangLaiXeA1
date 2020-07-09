@@ -14,7 +14,7 @@ namespace BTL_LTCSharp
 {
     public partial class frmExamination : Form
     {
-        public frmCustomer customerForm;
+        public frmUser userForm;
 
         // Variables store data from DataBase
         Dictionary<int, string> questionFromDB = new Dictionary<int, string>();
@@ -176,7 +176,7 @@ namespace BTL_LTCSharp
                 int index;
                 do
                 {
-                    index = new Random().Next(1, 80);
+                    index = new Random().Next(1, 81);
                 } while (chosen[index]);
                 chosen[index] = true;
                 question.Add(i, questionFromDB[index]);
@@ -191,7 +191,7 @@ namespace BTL_LTCSharp
                 int index;
                 do
                 {
-                    index = new Random().Next(81, 115);
+                    index = new Random().Next(81, 116);
                 } while (chosen[index]);
                 chosen[index] = true;
                 question.Add(i, questionFromDB[index]);
@@ -206,7 +206,7 @@ namespace BTL_LTCSharp
                 int index;
                 do
                 {
-                    index = new Random().Next(116, 150);
+                    index = new Random().Next(116, 151);
                 } while (chosen[index]);
                 chosen[index] = true;
                 question.Add(i, questionFromDB[index]);
@@ -305,7 +305,7 @@ namespace BTL_LTCSharp
                 }
                 else
                 {
-                    customerForm.Show();
+                    userForm.Show();
                 }
             }
             else
@@ -317,7 +317,7 @@ namespace BTL_LTCSharp
                 }
                 else
                 {
-                    customerForm.Show();
+                    userForm.Show();
                 }
             }
         }

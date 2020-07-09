@@ -1,6 +1,6 @@
 ﻿namespace BTL_LTCSharp
 {
-    partial class frmCustomer
+    partial class frmUser
     {
         /// <summary>
         /// Required designer variable.

@@ -14,7 +14,7 @@ namespace BTL_LTCSharp
         public static string username;
 
         //static SqlConnection sqlConnection = new SqlConnection(@"Data Source= OPREKIN-PC;Initial Catalog=BTLThiLaiXe; User ID=sa; Password=123;");
-        static SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-UIBSI5T;Initial Catalog=BTLThiLaiXe; User ID=sa; Password=123456;");
+        static SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-7HK0H4E;Initial Catalog=BTLThiLaiXe; User ID=sa; Password=a123456;");
         static SqlDataAdapter sqlData;
 
         public static DataTable executeQuery(string sql)

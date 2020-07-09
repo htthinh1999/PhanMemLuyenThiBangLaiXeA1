@@ -25,8 +25,8 @@ namespace BTL_LTCSharp
             {
                 if (Convert.ToInt32(dataLogin.Rows[0]["IsAdmin"]) == 0)
                 {
-                    frmCustomer customerForm = new frmCustomer();
-                    customerForm.Show();
+                    frmUser userForm = new frmUser();
+                    userForm.Show();
                 }
                 else
                 {

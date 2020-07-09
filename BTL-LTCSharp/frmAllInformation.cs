@@ -26,11 +26,11 @@ namespace BTL_LTCSharp
 
         private void frmAllInformation_Load(object sender, EventArgs e)
         {
-            ShowInformation();
-            ShowHistory();
+            ShowAllInformation();
+            ShowAllHistory();
         }
 
-        void ShowInformation()
+        void ShowAllInformation()
         {
             string sql = "Select MaThiSinh AS N'Mã Thí Sinh', HoTenThiSinh AS N'Họ Tên', CONVERT(VARCHAR(10), NgaySinh, 103) AS N'Ngày Sinh', GioiTinh AS N'Giới Tính', DiaChi AS N'Địa Chỉ' from ThiSinh";
             dataInformation.DataSource = DatabaseManager.executeQuery(sql);
@@ -43,6 +43,7 @@ namespace BTL_LTCSharp
                 column.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
+
         void ShowSearchInfo()
         {
             if(txtSearchInfo.Text.Equals(""))
@@ -51,9 +52,10 @@ namespace BTL_LTCSharp
             }
             else
             {
-                String sql = "exec prc_TimKiemThongTinThiSinh N'"+txtSearchInfo.Text+"'";
-                dataInformation.DataSource = DatabaseManager.executeQuery(sql);
-                if (DatabaseManager.executeQuery(sql).Rows.Count == 0)
+                String sql = "prc_TimKiemThongTinThiSinh N'"+txtSearchInfo.Text+"'";
+                DataTable dataTableInformation = DatabaseManager.executeQuery(sql);
+                dataInformation.DataSource = dataTableInformation;
+                if (dataTableInformation.Rows.Count == 0)
                     MessageBox.Show("Không tìm thấy thông tin cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
                 else
                 {
@@ -67,7 +69,8 @@ namespace BTL_LTCSharp
                 }    
             }    
         }
-        void ShowHistory()
+
+        void ShowAllHistory()
         {
             string sql = "Select T.MaThiSinh AS N'Mã Thí Sinh', HoTenThiSinh AS N'Họ Tên', LanThi AS N'Lần Thi', ThoiGian AS N'Thời Gian', KetQua AS N'Kết Quả'" +
                             " from KetQua K inner join ThiSinh T on K.MaThiSinh = T.MaThiSinh order by T.MaThiSinh, LanThi";
@@ -81,6 +84,7 @@ namespace BTL_LTCSharp
                 column.DefaultCellStyle.ForeColor = Color.Black;
             }
         }
+
         void ShowSearchResult()
         {
             if (txtSearchResult.Text.Equals(""))
@@ -89,7 +93,7 @@ namespace BTL_LTCSharp
             }
             else
             {
-                String sql = "exec prc_TimKiemKetQua N'" + txtSearchResult.Text + "'";
+                String sql = "prc_TimKiemKetQua N'" + txtSearchResult.Text + "'";
                 dataHistory.DataSource = DatabaseManager.executeQuery(sql);
                 if (DatabaseManager.executeQuery(sql).Rows.Count == 0)
                     MessageBox.Show("Không tìm thấy thông tin cần tìm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button1);
@@ -113,13 +117,13 @@ namespace BTL_LTCSharp
 
         private void btnRefreshInfo_Click(object sender, EventArgs e)
         {
-            ShowInformation();
+            ShowAllInformation();
             txtSearchInfo.Clear();
         }
 
         private void btnRefreshResult_Click(object sender, EventArgs e)
         {
-            ShowHistory();
+            ShowAllHistory();
             txtSearchResult.Clear();
         }
 
